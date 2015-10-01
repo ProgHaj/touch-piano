@@ -28,22 +28,32 @@
       (str)
       (Integer.)))
 
+(defn parse-int [s]
+   (Integer. (re-find  #"\d+" s )))
+
 (ser/on-byte port-1 right-hand)
 (def spec-notes ["d4" "f4" "a4" "c5" "d5" "e5" "f5"])
 
 (defn right-hand
-  ([input spec-notes]
-   (let [index (chr->int input)
-         notes ["c" "d" "e" "f" "g" "a" "b"]
-         oktav 4]
-     (((keyword (str (notes index) oktav)) piano))))
   ([input]
    (let [index (chr->int input)
-         notes spec-notes]
+         notes (notes)]
      (((keyword (notes index)) piano)))))
 
+(defn notes []
+  ["c4" "d4" "e4" "f4" "g4" "a4" "b4"])
 
 (ser/on-byte port-1 left-hand) ;Not implemented, add global volatile that enters setting.
 
+
+(defn left-hand
+  ([input]
+   (let [inp (chr->int input)
+         index (mod inp 10)
+         force (/ inp 10)
+         notes (notes)]
+     (((keyword (notes index)) piano) 1 0 0 force))))
+
+;{nil 1, :buf 3, :rate 1, :start-pos 0, :loop? 0, :amp 1, :pan 10, :out-bus 0
 
 

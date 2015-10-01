@@ -9,7 +9,7 @@
 
 const int PORTS[10] = {2,3,4,5,6,7,8,9,10,11};
 const int TRESHOLD = 10;
-const bool TOUCHED[10];
+bool TOUCHED[10];
 
 
 uint8_t readCapacitivePin(int pinToMeasure) {
@@ -33,7 +33,7 @@ uint8_t readCapacitivePin(int pinToMeasure) {
   *ddr  |= bitmask;
   delay(1);
 
-  uint8_t SREG_old = SREG; //back up the AVR Status Register
+  //uint8_t SREG_old = SREG; //back up the AVR Status Register
 
   // Prevent the timer IRQ from disturbing our measurement
   noInterrupts();
@@ -65,7 +65,7 @@ uint8_t readCapacitivePin(int pinToMeasure) {
   else if (*pin & bitmask) { cycles = 16;}
 
   // End of timing-critical section; turn interrupts back on if they were on before, or leave them off if they were off before
-  SREG = SREG_old;
+  //SREG = SREG_old;
 
 
 
@@ -82,16 +82,16 @@ uint8_t readCapacitivePin(int pinToMeasure) {
 
 }
 
-void port(ind index){
-  int amount = readCapacitivePin(PORTS[index]);
+void port(int index){
+  int amount = readCapacitivePin(PORTS[index]) - TRESHOLD;
   
-  if(!touched[index] && amount>= TRESHOLD{
-    touched[index] = true;
-    Serial.print(index);
+  if(!TOUCHED[index] && amount>= 0){
+    TOUCHED[index] = true;
+    Serial.print(amount*10+index);
   }
   
-  if(touched[index] && amount < TRESHOLD){
-    touched[index] = false;
+  if(TOUCHED[index] && amount < 0){
+    TOUCHED[index] = false;
   }
 }
 
