@@ -24,8 +24,7 @@
 
 
 (defn chr->int [c]
-  (-> (char c)
-      (str)
+  (-> (str c)
       (Integer.)))
 
 (defn parse-int [s]
@@ -41,9 +40,10 @@
      (((keyword (notes index)) piano)))))
 
 (defn notes []
-  ["c4" "d4" "e4" "f4" "g4" "a4" "b4"])
+  ["c4" "d4" "e4" "f4" "g4" "a4" "b4" "c5" "d5" "e5"])
 
-(ser/on-byte port-1 left-hand) ;Not implemented, add global volatile that enters setting.
+(ser/on-byte port-1 left-hand)
+
 
 
 (defn left-hand
@@ -57,3 +57,4 @@
 ;{nil 1, :buf 3, :rate 1, :start-pos 0, :loop? 0, :amp 1, :pan 10, :out-bus 0
 
 
+(def settings (atom {:setting-mode nil :notes (notes)}))
