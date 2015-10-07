@@ -1,15 +1,18 @@
 (ns touch-piano.settings.clj)
 
-(def decisions (atom []));
-
-(def settings (atom {:setting-mode nil :notes (notes)}
-                    :decisions decisions))
+(def decisions (atom []))
+(def notes (atom []))
+(def settings (atom {:setting-mode nil :notes notes
+                     :decisions decisions}))
 ;reset! swap!
 
-(defn change-settings [input]
-  (if (:setting-mode setting)
-    nil
-    :activated))
+(defn notes [file]
+  (reset! notes (slurp file)))
+
+(defn change-settings []
+  (if (:setting-mode @settings)
+    (swap! settings assoc :setting-mode nil)
+    (swap! settings assoc :setting-mode :activated)))
 
 ;Load from file settings?
 (defn decide [input]
@@ -67,7 +70,8 @@
              (= 3 input) (lower-note button 8)
              (= 4 input) (raise-note button 8)
              (= 5 input) (play-note)
-             (>= 6 input) (save-note))))
+             (>= 6 input) (save-note)))
+  (!reset decisions []))
 
 (defn third-menu-2
   ""
