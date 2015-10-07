@@ -7,7 +7,7 @@
 ;reset! swap!
 
 (defn notes [file]
-  (reset! notes (slurp file)))
+  (reset! notes assoc (slurp file)))
 
 (defn change-settings []
   (if (:setting-mode @settings)
