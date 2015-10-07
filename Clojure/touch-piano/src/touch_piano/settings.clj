@@ -11,15 +11,16 @@
 
 (defn change-settings []
   (if (:setting-mode @settings)
-    (swap! settings assoc :setting-mode nil)
+    (do (reset! decisions [])
+        (swap! settings assoc :setting-mode nil))
     (swap! settings assoc :setting-mode :activated)))
 
 ;Load from file settings?
 (defn decide [input]
   (cond (= 0 (count decisions)) (menu-1 input)
         (= 1 (count decisions)) (menu-1-1 input)
-        (= 2 (count decisions)) ((symbol (str "third-menu-"(@decisions 1))) input (@decisions 0))))
-;gulp and spit for saving, ez pz
+        (= 2 (count decisions)) ((symbol (str "third-menu-"(@decisions 0))) input (@decisions 1))))
+;slurp and spit for saving, ez pz
 
 
 ;Index 0 = activate settings, deactivate settings.
@@ -29,7 +30,7 @@
 (defn first-menu [input]
   (if (= 0 input)
     (change-settings)
-    (swap! decisions #(into % [(symbol (str "menu-1-" input))]))))
+    (swap! decisions #(into % [input]))))
 
 ;;Smartare att bara ha en decision 2 och spara värdet istället. Samma på alla utom de sista... kom ihåg alternativ 1 och 2 för sista steget.
 (defn second-menu [input]
@@ -40,19 +41,27 @@
 
 ;index 1-9 = first press = what to do,
 ;1 modify button
-;2 
-;3 modify scale
-;4 add note to button 
-;5 
-;6 
+;2 modify scale
+;3 add note to button
+;4 record?
+;5 change-profile->previous
+;6 change-profile->next
 ;7 save profile
 ;8 load profile
 ;9 reset profile
 
-(defn i0? [input do-rest]
-  (if (= 0 input)
-    (change-settings)
-    (do-rest)))
+
+
+
+(defn lower-note [button & rest]
+  1)
+(defn raise-note [button & rest]
+  2)
+(defn play-note [button]
+  3)
+(defn save-note [button]
+  4)
+
 
 ;;1
 ;1-9 edits the selected button.
@@ -63,15 +72,17 @@
 (defn third-menu-1
   "Modify button"
   [input choice]
-  (i0? input
-       (let [button (@decisions 1)])
-       (cond (= 1 input) (lower-note button)
-             (= 2 input) (raise-note button)
-             (= 3 input) (lower-note button 8)
-             (= 4 input) (raise-note button 8)
-             (= 5 input) (play-note)
-             (>= 6 input) (save-note)))
-  (!reset decisions []))
+  (do
+    (change-settings)
+    (let [button choice]
+      (cond (= 1 input) (lower-note button)
+            (= 2 input) (raise-note button)
+            (= 3 input) (lower-note button 8)
+            (= 4 input) (raise-note button 8)
+            (= 5 input) (play-note button)
+            (>= 6 input) (save-note button)))))
+
+
 
 (defn third-menu-2
   ""
