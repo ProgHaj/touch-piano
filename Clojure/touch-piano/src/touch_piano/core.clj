@@ -3,7 +3,7 @@
             [overtone.core :refer :all]))
 
 (boot-external-server)
-
+(use '[touch-piano.settings])
 
 ;Since the freesound.org api wasn't working I created my own overtone instrument, using the sounds from MISStereoPiano
 (defn created-piano []
@@ -44,8 +44,7 @@
 (defn notes []
   ["c3" "d3" "e3" "f3" "g3" "a3" "b3" "c4" "d4" "e4"])
 
-(ser/on-byte port-2 left-hand)
-(ser/on-byte port-1 right-hand)
+
 
 
 (defn left-hand
@@ -65,6 +64,9 @@
      (((keyword (notes index)) piano) 1 0 0 1))))
 
 ;{nil 1, :buf 3, :rate 1, :start-pos 0, :loop? 0, :amp 1, :pan 10, :out-bus 0
+
+(ser/on-byte port-2 left-hand)
+(ser/on-byte port-1 right-hand)
 
 
 (def settings (atom {:setting-mode nil :notes (notes)}))
