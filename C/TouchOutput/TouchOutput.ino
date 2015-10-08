@@ -87,7 +87,8 @@ void port(int index){
   
   if(!TOUCHED[index] && amount>= 0){
     TOUCHED[index] = true;
-    Serial.print(amount*10+index);
+    //int test = amount*10+index;
+    Serial.print(index);
   }
   
   if(TOUCHED[index] && amount < 0){
