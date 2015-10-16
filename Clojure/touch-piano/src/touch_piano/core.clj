@@ -3,7 +3,8 @@
             [overtone.core :refer :all]))
 
 (boot-external-server)
-;(use '[touch-piano.settings])
+;(require '[touch-piano.settings :as settings])
+(use '[touch-piano.settings])
 
 ;Since the freesound.org api wasn't working I created my own overtone instrument, using the sounds from MISStereoPiano
 (defn created-piano []
@@ -34,25 +35,33 @@
 (defn parse-int [s]
    (Integer. (re-find  #"\d+" s )))
 
-(ser/on-byte port-1 right-hand)
-(def spec-notes ["d4" "f4" "a4" "c5" "d5" "e5" "f5"])
+;(ser/on-byte port-1 right-hand)
+;(def spec-notes ["d4" "f4" "a4" "c5" "d5" "e5" "f5"])
 
 
+(comment
+  (defn notes-2 []
+    ["c4" "d4" "e4" "gb4" "g4" "a4" "b4" "c5" "d5" "e5"])
+  (defn notes []
+    ["d2" "g2" "a2" "c3" "d3" "e3" "g3" "a3" "e4" "f4"]))
 
-(defn notes-2 []
-  ["c4" "d4" "e4" "gb4" "g4" "a4" "b4" "c5" "d5" "e5"])
-(defn notes []
-  ["d2" "g2" "a2" "c3" "d3" "e3" "g3" "a3" "e4" "f4"])
 
-
-(defn play-multiple [coll ]
+(defn play-multiple [coll]
   (loop [coll coll]
     (if (empty? coll)
       nil
       (do
         (((keyword (first coll)) piano))
         (recur (rest coll))))))
+
 ;{nil 0, :buf 15, :rate 0, :start-pos 0, :loop? 0, :amp 0, :pan 0, :out-bus 0}
+
+(defn play-chord [note]
+  (let [start note
+        chord [start
+               (number->note (+ (note->number start) 4))
+               (number->note (+ (note->number start) 7))]]
+    (play-multiple chord)))
 
 (defn left-hand
   ([input]

@@ -21,14 +21,17 @@
 (def number-note ["c" "db" "d" "eb" "e" "f" "gb" "g" "ab" "a" "bb" "b"])
 
 (defn note->number [note]
-  (+ (* (Integer. (str (.charAt note (dec (.length note))))) 12)
-     (note-number
-      (if (= 3 (.length note))
-        (subs note 0 2)
-        (subs note 0 1)))))
+  (let [note (name note)]
+    (+ (* (Integer. (str (.charAt note (dec (.length note))))) 12)
+       (note-number
+        (if (= 3 (.length note))
+          (subs note 0 2)
+          (subs note 0 1))))))
 
 (defn number->note [number]
-  (str (number-note (mod number 12)) (int (/ number 12))))
+  (keyword (str (number-note (mod number 12)) (int (/ number 12)))))
+
+
 
 (defn load-notes [file]
   (reset! notes (map #(hash-map (keyword (str %2)) %1) (str/split (slurp file) #"\s") (range 7))))
@@ -105,20 +108,21 @@
 
 
 
-(defn third-menu-2
+(comment
+  (defn third-menu-2
   ""
-  (if (=)))
+  (if (=))))
 
 
 (defn third-menu-3 [input]
-  (let chosen = )
+  (let [chosen =] )
   (cond (= 0 input) ()
-        (= 1 input)
-        (= 2 input)
-        (= 3 input)
-        (= 4 input)
-        (= 5 input)
-        (>= 6 input)))
+        (= 1 input) ()
+        (= 2 input) ()
+        (= 3 input) ()
+        (= 4 input) ()
+        (= 5 input) ()
+        (>= 6 input) ()))
 ;;2
 
 ;;3
