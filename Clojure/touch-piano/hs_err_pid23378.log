@@ -1,0 +1,1324 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f393b5730dc, pid=23378, tid=139883494377216
+#
+# JRE version: OpenJDK Runtime Environment (8.0_60-b24) (build 1.8.0_60-b24)
+# Java VM: OpenJDK 64-Bit Server VM (25.60-b23 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# C  [libscsynth.so+0x220dc]  SC_UdpInPort::SC_UdpInPort(World*, int)+0x9c
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f395094a800):  JavaThread "Thread-13" daemon [_thread_in_native, id=23429, stack(0x00007f3929ee0000,0x00007f3929fe1000)]
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x0000000000000160
+
+Registers:
+RAX=0x0000000000000001, RBX=0x00007f39440e5a90, RCX=0xffffffffffffff98, RDX=0x0000000000000001
+RSP=0x00007f3929fdef20, RBP=0x0000000000000000, RSI=0x0000000000000001, RDI=0x0000000000005b8f
+R8 =0x00007f3906146700, R9 =0x00007f3929fdeee0, R10=0x00007f39061469d0, R11=0x0000000000000246
+R12=0x0000000000000000, R13=0x00007f3929fdf720, R14=0x00007f3929fdf630, R15=0xfffffffffffffffc
+RIP=0x00007f393b5730dc, EFLAGS=0x0000000000010206, CSGSFS=0x0000000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007f3929fdef20)
+0x00007f3929fdef20:   00007f39440e5a90 00007f3944000020
+0x00007f3929fdef30:   000000000000e16f 0000000000000000
+0x00007f3929fdef40:   00007f39440e5a90 00007f3900010000
+0x00007f3929fdef50:   00000000000e7000 00007f39440e5a90
+0x00007f3929fdef60:   000000000000e16f 00007f393b589492
+0x00007f3929fdef70:   0000000000000010 00007f3929fdef90
+0x00007f3929fdef80:   00007f39505ec720 00007f393b9e9034
+0x00007f3929fdef90:   000000000000000a 00007f3929fdf7b0
+0x00007f3929fdefa0:   00007f3929fdf070 00007f393b9e8a61
+0x00007f3929fdefb0:   00007f3929fdefd8 0000000000000004
+0x00007f3929fdefc0:   000000000000000e 00007f3929fdeee0
+0x00007f3929fdefd0:   0000000000000000 00007f3929fdf630
+0x00007f3929fdefe0:   00007f39505ec720 00007f393b589460
+0x00007f3929fdeff0:   00007f3929fdf7b0 00007f3929fdeee0
+0x00007f3929fdf000:   00007f39505ec690 0000000200000000
+0x00007f3929fdf010:   0000000000000010 00007f3929fdef90
+0x00007f3929fdf020:   00007f3900000002 00007f39c2506211
+0x00007f3929fdf030:   0000000000000001 e98697b23a518f00
+0x00007f3929fdf040:   00000000ffffffff 0000000000000001
+0x00007f3929fdf050:   0000000000000002 0000000000000004
+0x00007f3929fdf060:   00007f393b9eafcc 0000000000000000
+0x00007f3929fdf070:   00007f3929fdf610 00007f393b9de1a5
+0x00007f3929fdf080:   0000000000000018 0000000000000000
+0x00007f3929fdf090:   0000000000000610 00007f393b9ddfec
+0x00007f3929fdf0a0:   0000000000000000 0000000000000000
+0x00007f3929fdf0b0:   0000000000000000 0000000000000000
+0x00007f3929fdf0c0:   000000000000000e ffffffffffffffff
+0x00007f3929fdf0d0:   0000000000000000 0000000000000000
+0x00007f3929fdf0e0:   0000000000000000 00000007c0ba4b20
+0x00007f3929fdf0f0:   00000007c0ba4b20 00007f3950874728
+0x00007f3929fdf100:   000000000000000e ffffffffffffffff
+0x00007f3929fdf110:   00000000ffffffff 00007f39c2d1f798 
+
+Instructions: (pc=0x00007f393b5730dc)
+0x00007f393b5730bc:   66 c1 c8 08 c7 43 24 00 00 00 00 66 89 43 22 e8
+0x00007f393b5730cc:   50 e2 ff ff 85 c0 78 2d 48 89 df e8 64 dd ff ff
+0x00007f393b5730dc:   80 bd 60 01 00 00 00 74 15 48 8b 15 a4 1c 24 00
+0x00007f393b5730ec:   48 8d 7b 30 48 89 d9 31 f6 e8 26 cf ff ff 48 83 
+
+Register to memory mapping:
+
+RAX=0x0000000000000001 is an unknown value
+RBX=0x00007f39440e5a90 is an unknown value
+RCX=0xffffffffffffff98 is an unknown value
+RDX=0x0000000000000001 is an unknown value
+RSP=0x00007f3929fdef20 is pointing into the stack for thread: 0x00007f395094a800
+RBP=0x0000000000000000 is an unknown value
+RSI=0x0000000000000001 is an unknown value
+RDI=0x0000000000005b8f is an unknown value
+R8 =0x00007f3906146700 is an unknown value
+R9 =0x00007f3929fdeee0 is pointing into the stack for thread: 0x00007f395094a800
+R10=0x00007f39061469d0 is an unknown value
+R11=0x0000000000000246 is an unknown value
+R12=0x0000000000000000 is an unknown value
+R13=0x00007f3929fdf720 is pointing into the stack for thread: 0x00007f395094a800
+R14=0x00007f3929fdf630 is pointing into the stack for thread: 0x00007f395094a800
+R15=0xfffffffffffffffc is an unknown value
+
+
+Stack: [0x00007f3929ee0000,0x00007f3929fe1000],  sp=0x00007f3929fdef20,  free space=1019k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libscsynth.so+0x220dc]  SC_UdpInPort::SC_UdpInPort(World*, int)+0x9c
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  overtone.sc.machinery.server.native.lib_ff585551_fe61_4c57_81ac_824dd9a61363.World_OpenUDP(Lcom/sun/jna/Pointer;I)I+0
+j  overtone.sc.machinery.server.native$eval10806$fn__10807.invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;+15
+j  overtone.sc.machinery.server.native$scsynth_listen_udp.invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;+55
+j  overtone.sc.machinery.server.connection$internal_booter.invoke(Ljava/lang/Object;)Ljava/lang/Object;+201
+j  overtone.sc.machinery.server.connection$boot_internal_server$fn__10899.invoke()Ljava/lang/Object;+13
+j  clojure.lang.AFn.run()V+1
+j  java.lang.Thread.run()V+11
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+=>0x00007f395094a800 JavaThread "Thread-13" daemon [_thread_in_native, id=23429, stack(0x00007f3929ee0000,0x00007f3929fe1000)]
+  0x00007f39505db000 JavaThread "clojure-agent-send-pool-4" daemon [_thread_blocked, id=23428, stack(0x00007f3929fe1000,0x00007f392a0e2000)]
+  0x00007f39505f7000 JavaThread "clojure-agent-send-pool-3" daemon [_thread_blocked, id=23427, stack(0x00007f392a0e2000,0x00007f392a1e3000)]
+  0x00007f3950583000 JavaThread "pool-2-thread-6" [_thread_blocked, id=23426, stack(0x00007f392b2f7000,0x00007f392b3f8000)]
+  0x00007f3950569800 JavaThread "pool-2-thread-5" [_thread_blocked, id=23425, stack(0x00007f392b3f8000,0x00007f392b4f9000)]
+  0x00007f3950567800 JavaThread "pool-2-thread-4" [_thread_blocked, id=23424, stack(0x00007f392b4f9000,0x00007f392b5fa000)]
+  0x00007f395056b000 JavaThread "pool-2-thread-3" [_thread_blocked, id=23423, stack(0x00007f392b5fa000,0x00007f392b6fb000)]
+  0x00007f3950521000 JavaThread "pool-2-thread-2" [_thread_blocked, id=23422, stack(0x00007f392b8fb000,0x00007f392b9fc000)]
+  0x00007f39504fb800 JavaThread "pool-2-thread-1" [_thread_blocked, id=23421, stack(0x00007f392b9fc000,0x00007f392bafd000)]
+  0x00007f3930001000 JavaThread "pool-3-thread-6" [_thread_blocked, id=23420, stack(0x00007f392bcfd000,0x00007f392bdfe000)]
+  0x00007f3934004800 JavaThread "pool-3-thread-5" [_thread_blocked, id=23419, stack(0x00007f392bdfe000,0x00007f392beff000)]
+  0x00007f392c001000 JavaThread "pool-3-thread-4" [_thread_blocked, id=23418, stack(0x00007f392beff000,0x00007f392c000000)]
+  0x00007f3934003000 JavaThread "pool-3-thread-3" [_thread_blocked, id=23417, stack(0x00007f39382dc000,0x00007f39383dd000)]
+  0x00007f3934001800 JavaThread "pool-3-thread-2" [_thread_blocked, id=23416, stack(0x00007f39383dd000,0x00007f39384de000)]
+  0x00007f39505e2800 JavaThread "pool-3-thread-1" [_thread_blocked, id=23415, stack(0x00007f39384de000,0x00007f39385df000)]
+  0x00007f395014b800 JavaThread "AWT-XAWT" daemon [_thread_in_native, id=23414, stack(0x00007f399021d000,0x00007f399031e000)]
+  0x00007f395010d800 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=23413, stack(0x00007f399c068000,0x00007f399c169000)]
+  0x00007f3944002000 JavaThread "clojure-agent-send-pool-2" daemon [_thread_blocked, id=23412, stack(0x00007f399c844000,0x00007f399c945000)]
+  0x00007f3958001000 JavaThread "clojure-agent-send-pool-1" daemon [_thread_blocked, id=23411, stack(0x00007f399c945000,0x00007f399ca46000)]
+  0x00007f3954019000 JavaThread "nREPL-worker-1" daemon [_thread_blocked, id=23410, stack(0x00007f399ca46000,0x00007f399cb47000)]
+  0x00007f3964006800 JavaThread "clojure-agent-send-off-pool-4" [_thread_blocked, id=23409, stack(0x00007f399cb47000,0x00007f399cc48000)]
+  0x00007f3954005800 JavaThread "clojure-agent-send-pool-0" daemon [_thread_blocked, id=23408, stack(0x00007f399cc48000,0x00007f399cd49000)]
+  0x00007f396000b000 JavaThread "nREPL-worker-0" daemon [_thread_blocked, id=23407, stack(0x00007f399cd49000,0x00007f399ce4a000)]
+  0x00007f3964005000 JavaThread "clojure-agent-send-off-pool-3" [_thread_blocked, id=23406, stack(0x00007f399ce4a000,0x00007f399cf4b000)]
+  0x00007f396806a000 JavaThread "clojure-agent-send-off-pool-2" [_thread_in_native, id=23405, stack(0x00007f399cf4b000,0x00007f399d04c000)]
+  0x00007f39bcc63000 JavaThread "clojure-agent-send-off-pool-1" [_thread_in_native, id=23399, stack(0x00007f399dd02000,0x00007f399de03000)]
+  0x00007f39bcc61000 JavaThread "clojure-agent-send-off-pool-0" [_thread_blocked, id=23398, stack(0x00007f399de03000,0x00007f399df04000)]
+  0x00007f39bc0c8800 JavaThread "Service Thread" daemon [_thread_blocked, id=23396, stack(0x00007f399e81c000,0x00007f399e91d000)]
+  0x00007f39bc0bb800 JavaThread "C1 CompilerThread2" daemon [_thread_blocked, id=23395, stack(0x00007f399e91d000,0x00007f399ea1e000)]
+  0x00007f39bc0ba000 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=23394, stack(0x00007f399ea1e000,0x00007f399eb1f000)]
+  0x00007f39bc0b7000 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=23393, stack(0x00007f399eb1f000,0x00007f399ec20000)]
+  0x00007f39bc0b5800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=23392, stack(0x00007f399ec20000,0x00007f399ed21000)]
+  0x00007f39bc07e000 JavaThread "Finalizer" daemon [_thread_blocked, id=23391, stack(0x00007f399eeef000,0x00007f399eff0000)]
+  0x00007f39bc07c000 JavaThread "Reference Handler" daemon [_thread_blocked, id=23390, stack(0x00007f399eff0000,0x00007f399f0f1000)]
+  0x00007f39bc009800 JavaThread "main" [_thread_blocked, id=23379, stack(0x00007f39c3adf000,0x00007f39c3be0000)]
+
+Other Threads:
+  0x00007f39bc077000 VMThread [stack: 0x00007f399f0f1000,0x00007f399f1f2000] [id=23389]
+  0x00007f39bc0cb000 WatcherThread [stack: 0x00007f399e71b000,0x00007f399e81c000] [id=23397]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 830976K, used 78032K [0x000000078c780000, 0x00000007bff80000, 0x00000007c0000000)
+  eden space 817664K, 8% used [0x000000078c780000,0x0000000790b4de60,0x00000007be600000)
+  from space 13312K, 64% used [0x00000007be600000,0x00000007bee662f8,0x00000007bf300000)
+  to   space 12800K, 0% used [0x00000007bf300000,0x00000007bf300000,0x00000007bff80000)
+ ParOldGen       total 160768K, used 43663K [0x0000000725600000, 0x000000072f300000, 0x000000078c780000)
+  object space 160768K, 27% used [0x0000000725600000,0x00000007280a3e10,0x000000072f300000)
+ Metaspace       used 51253K, capacity 72389K, committed 72448K, reserved 1099776K
+  class space    used 14210K, capacity 21496K, committed 21504K, reserved 1048576K
+
+Card table byte_map: [0x00007f39c08cc000,0x00007f39c0da2000] byte_map_base: 0x00007f39bcfa1000
+
+Marking Bits: (ParMarkBitMap*) 0x00007f39c2ddf7e0
+ Begin Bits: [0x00007f39932b0000, 0x00007f3995958000)
+ End Bits:   [0x00007f3995958000, 0x00007f3998000000)
+
+Polling page: 0x00007f39c3c01000
+
+CodeCache: size=245760Kb used=8069Kb max_used=8069Kb free=237690Kb
+ bounds [0x00007f39ad000000, 0x00007f39ad7f0000, 0x00007f39bc000000]
+ total_blobs=3819 nmethods=3310 adapters=423
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 28,372 Thread 0x00007f39bc0bb800 3315       1       java.lang.Double::doubleValue (5 bytes)
+Event: 28,373 Thread 0x00007f39bc0bb800 nmethod 3315 0x00007f39ad7e09d0 code [0x00007f39ad7e0b20, 0x00007f39ad7e0c30]
+Event: 29,442 Thread 0x00007f39bc0bb800 3316       1       java.util.concurrent.locks.ReentrantLock$Sync::nonfairTryAcquire (67 bytes)
+Event: 29,443 Thread 0x00007f39bc0bb800 nmethod 3316 0x00007f39ad7e0c90 code [0x00007f39ad7e0e00, 0x00007f39ad7e1048]
+Event: 31,979 Thread 0x00007f39bc0bb800 3317       1       java.lang.Long::doubleValue (6 bytes)
+Event: 31,979 Thread 0x00007f39bc0bb800 nmethod 3317 0x00007f39ad7e1110 code [0x00007f39ad7e1260, 0x00007f39ad7e1370]
+Event: 32,731 Thread 0x00007f39bc0bb800 3318       1       clojure.lang.Numbers$BigIntOps::combine (8 bytes)
+Event: 32,732 Thread 0x00007f39bc0bb800 nmethod 3318 0x00007f39ad7e13d0 code [0x00007f39ad7e1540, 0x00007f39ad7e1688]
+Event: 32,732 Thread 0x00007f39bc0bb800 3319       1       clojure.lang.Numbers$BigIntOps::lt (12 bytes)
+Event: 32,732 Thread 0x00007f39bc0bb800 nmethod 3319 0x00007f39ad7e1710 code [0x00007f39ad7e1880, 0x00007f39ad7e1a08]
+
+GC Heap History (10 events):
+Event: 12,551 GC heap before
+{Heap before GC invocations=12 (full 2):
+ PSYoungGen      total 647680K, used 636928K [0x000000078c780000, 0x00000007c0000000, 0x00000007c0000000)
+  eden space 636928K, 100% used [0x000000078c780000,0x00000007b3580000,0x00000007b3580000)
+  from space 10752K, 0% used [0x00000007b3580000,0x00000007b3580000,0x00000007b4000000)
+  to   space 11264K, 0% used [0x00000007bf500000,0x00000007bf500000,0x00000007c0000000)
+ ParOldGen       total 110592K, used 25659K [0x0000000725600000, 0x000000072c200000, 0x000000078c780000)
+  object space 110592K, 23% used [0x0000000725600000,0x0000000726f0efd8,0x000000072c200000)
+ Metaspace       used 38494K, capacity 51073K, committed 51328K, reserved 1085440K
+  class space    used 10256K, capacity 14680K, committed 14720K, reserved 1048576K
+Event: 12,568 GC heap after
+Heap after GC invocations=12 (full 2):
+ PSYoungGen      total 829952K, used 11260K [0x000000078c780000, 0x00000007c0000000, 0x00000007c0000000)
+  eden space 818688K, 0% used [0x000000078c780000,0x000000078c780000,0x00000007be700000)
+  from space 11264K, 99% used [0x00000007bf500000,0x00000007bffff320,0x00000007c0000000)
+  to   space 12800K, 0% used [0x00000007be700000,0x00000007be700000,0x00000007bf380000)
+ ParOldGen       total 110592K, used 26703K [0x0000000725600000, 0x000000072c200000, 0x000000078c780000)
+  object space 110592K, 24% used [0x0000000725600000,0x0000000727013d38,0x000000072c200000)
+ Metaspace       used 38494K, capacity 51073K, committed 51328K, reserved 1085440K
+  class space    used 10256K, capacity 14680K, committed 14720K, reserved 1048576K
+}
+Event: 14,051 GC heap before
+{Heap before GC invocations=13 (full 2):
+ PSYoungGen      total 829952K, used 829948K [0x000000078c780000, 0x00000007c0000000, 0x00000007c0000000)
+  eden space 818688K, 100% used [0x000000078c780000,0x00000007be700000,0x00000007be700000)
+  from space 11264K, 99% used [0x00000007bf500000,0x00000007bffff320,0x00000007c0000000)
+  to   space 12800K, 0% used [0x00000007be700000,0x00000007be700000,0x00000007bf380000)
+ ParOldGen       total 110592K, used 26703K [0x0000000725600000, 0x000000072c200000, 0x000000078c780000)
+  object space 110592K, 24% used [0x0000000725600000,0x0000000727013d38,0x000000072c200000)
+ Metaspace       used 41084K, capacity 55075K, committed 55168K, reserved 1087488K
+  class space    used 11203K, capacity 16255K, committed 16256K, reserved 1048576K
+Event: 14,071 GC heap after
+Heap after GC invocations=13 (full 2):
+ PSYoungGen      total 831488K, used 7220K [0x000000078c780000, 0x00000007c0000000, 0x00000007c0000000)
+  eden space 818688K, 0% used [0x000000078c780000,0x000000078c780000,0x00000007be700000)
+  from space 12800K, 56% used [0x00000007be700000,0x00000007bee0d350,0x00000007bf380000)
+  to   space 12800K, 0% used [0x00000007bf380000,0x00000007bf380000,0x00000007c0000000)
+ ParOldGen       total 110592K, used 34953K [0x0000000725600000, 0x000000072c200000, 0x000000078c780000)
+  object space 110592K, 31% used [0x0000000725600000,0x0000000727822608,0x000000072c200000)
+ Metaspace       used 41084K, capacity 55075K, committed 55168K, reserved 1087488K
+  class space    used 11203K, capacity 16255K, committed 16256K, reserved 1048576K
+}
+Event: 15,016 GC heap before
+{Heap before GC invocations=14 (full 2):
+ PSYoungGen      total 831488K, used 412351K [0x000000078c780000, 0x00000007c0000000, 0x00000007c0000000)
+  eden space 818688K, 49% used [0x000000078c780000,0x00000007a53229b8,0x00000007be700000)
+  from space 12800K, 56% used [0x00000007be700000,0x00000007bee0d350,0x00000007bf380000)
+  to   space 12800K, 0% used [0x00000007bf380000,0x00000007bf380000,0x00000007c0000000)
+ ParOldGen       total 110592K, used 34953K [0x0000000725600000, 0x000000072c200000, 0x000000078c780000)
+  object space 110592K, 31% used [0x0000000725600000,0x0000000727822608,0x000000072c200000)
+ Metaspace       used 43450K, capacity 59065K, committed 59160K, reserved 1091584K
+  class space    used 11928K, capacity 17529K, committed 17536K, reserved 1048576K
+Event: 15,028 GC heap after
+Heap after GC invocations=14 (full 2):
+ PSYoungGen      total 830464K, used 11040K [0x000000078c780000, 0x00000007c0000000, 0x00000007c0000000)
+  eden space 817664K, 0% used [0x000000078c780000,0x000000078c780000,0x00000007be600000)
+  from space 12800K, 86% used [0x00000007bf380000,0x00000007bfe48000,0x00000007c0000000)
+  to   space 13312K, 0% used [0x00000007be600000,0x00000007be600000,0x00000007bf300000)
+ ParOldGen       total 110592K, used 34961K [0x0000000725600000, 0x000000072c200000, 0x000000078c780000)
+  object space 110592K, 31% used [0x0000000725600000,0x0000000727824608,0x000000072c200000)
+ Metaspace       used 43450K, capacity 59065K, committed 59160K, reserved 1091584K
+  class space    used 11928K, capacity 17529K, committed 17536K, reserved 1048576K
+}
+Event: 15,028 GC heap before
+{Heap before GC invocations=15 (full 3):
+ PSYoungGen      total 830464K, used 11040K [0x000000078c780000, 0x00000007c0000000, 0x00000007c0000000)
+  eden space 817664K, 0% used [0x000000078c780000,0x000000078c780000,0x00000007be600000)
+  from space 12800K, 86% used [0x00000007bf380000,0x00000007bfe48000,0x00000007c0000000)
+  to   space 13312K, 0% used [0x00000007be600000,0x00000007be600000,0x00000007bf300000)
+ ParOldGen       total 110592K, used 34961K [0x0000000725600000, 0x000000072c200000, 0x000000078c780000)
+  object space 110592K, 31% used [0x0000000725600000,0x0000000727824608,0x000000072c200000)
+ Metaspace       used 43450K, capacity 59065K, committed 59160K, reserved 1091584K
+  class space    used 11928K, capacity 17529K, committed 17536K, reserved 1048576K
+Event: 15,425 GC heap after
+Heap after GC invocations=15 (full 3):
+ PSYoungGen      total 830464K, used 0K [0x000000078c780000, 0x00000007c0000000, 0x00000007c0000000)
+  eden space 817664K, 0% used [0x000000078c780000,0x000000078c780000,0x00000007be600000)
+  from space 12800K, 0% used [0x00000007bf380000,0x00000007bf380000,0x00000007c0000000)
+  to   space 13312K, 0% used [0x00000007be600000,0x00000007be600000,0x00000007bf300000)
+ ParOldGen       total 160768K, used 43655K [0x0000000725600000, 0x000000072f300000, 0x000000078c780000)
+  object space 160768K, 27% used [0x0000000725600000,0x00000007280a1e10,0x000000072f300000)
+ Metaspace       used 43450K, capacity 59065K, committed 59160K, reserved 1091584K
+  class space    used 11928K, capacity 17529K, committed 17536K, reserved 1048576K
+}
+Event: 18,219 GC heap before
+{Heap before GC invocations=16 (full 3):
+ PSYoungGen      total 830464K, used 817664K [0x000000078c780000, 0x00000007c0000000, 0x00000007c0000000)
+  eden space 817664K, 100% used [0x000000078c780000,0x00000007be600000,0x00000007be600000)
+  from space 12800K, 0% used [0x00000007bf380000,0x00000007bf380000,0x00000007c0000000)
+  to   space 13312K, 0% used [0x00000007be600000,0x00000007be600000,0x00000007bf300000)
+ ParOldGen       total 160768K, used 43655K [0x0000000725600000, 0x000000072f300000, 0x000000078c780000)
+  object space 160768K, 27% used [0x0000000725600000,0x00000007280a1e10,0x000000072f300000)
+ Metaspace       used 51172K, capacity 72285K, committed 72448K, reserved 1099776K
+  class space    used 14194K, capacity 21484K, committed 21504K, reserved 1048576K
+Event: 18,233 GC heap after
+Heap after GC invocations=16 (full 3):
+ PSYoungGen      total 830976K, used 8600K [0x000000078c780000, 0x00000007bff80000, 0x00000007c0000000)
+  eden space 817664K, 0% used [0x000000078c780000,0x000000078c780000,0x00000007be600000)
+  from space 13312K, 64% used [0x00000007be600000,0x00000007bee662f8,0x00000007bf300000)
+  to   space 12800K, 0% used [0x00000007bf300000,0x00000007bf300000,0x00000007bff80000)
+ ParOldGen       total 160768K, used 43663K [0x0000000725600000, 0x000000072f300000, 0x000000078c780000)
+  object space 160768K, 27% used [0x0000000725600000,0x00000007280a3e10,0x000000072f300000)
+ Metaspace       used 51172K, capacity 72285K, committed 72448K, reserved 1099776K
+  class space    used 14194K, capacity 21484K, committed 21504K, reserved 1048576K
+}
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (10 events):
+Event: 23,347 Thread 0x00007f3964005000 Exception <a 'java/lang/ClassNotFoundException': > (0x000000078f477c30) thrown at [/build/java8-openjdk/src/jdk8u-jdk8u60-b24/hotspot/src/share/vm/prims/jni.cpp, line 735]
+Event: 23,347 Thread 0x00007f3964005000 Exception <a 'java/lang/ClassNotFoundException': > (0x000000078f478c10) thrown at [/build/java8-openjdk/src/jdk8u-jdk8u60-b24/hotspot/src/share/vm/prims/jni.cpp, line 735]
+Event: 23,347 Thread 0x00007f3964005000 Exception <a 'java/lang/ClassNotFoundException': > (0x000000078f479920) thrown at [/build/java8-openjdk/src/jdk8u-jdk8u60-b24/hotspot/src/share/vm/prims/jni.cpp, line 735]
+Event: 23,347 Thread 0x00007f3964005000 Exception <a 'java/lang/ClassNotFoundException': > (0x000000078f47a900) thrown at [/build/java8-openjdk/src/jdk8u-jdk8u60-b24/hotspot/src/share/vm/prims/jni.cpp, line 735]
+Event: 23,347 Thread 0x00007f3964005000 Exception <a 'java/lang/ClassNotFoundException': > (0x000000078f47b4d0) thrown at [/build/java8-openjdk/src/jdk8u-jdk8u60-b24/hotspot/src/share/vm/prims/jni.cpp, line 735]
+Event: 23,347 Thread 0x00007f3964005000 Exception <a 'java/lang/ClassNotFoundException': > (0x000000078f47c370) thrown at [/build/java8-openjdk/src/jdk8u-jdk8u60-b24/hotspot/src/share/vm/prims/jni.cpp, line 735]
+Event: 23,347 Thread 0x00007f3964005000 Exception <a 'java/lang/ClassNotFoundException': > (0x000000078f47cdb0) thrown at [/build/java8-openjdk/src/jdk8u-jdk8u60-b24/hotspot/src/share/vm/prims/jni.cpp, line 735]
+Event: 23,347 Thread 0x00007f3964005000 Exception <a 'java/lang/ClassNotFoundException': > (0x000000078f47d7f0) thrown at [/build/java8-openjdk/src/jdk8u-jdk8u60-b24/hotspot/src/share/vm/prims/jni.cpp, line 735]
+Event: 23,348 Thread 0x00007f3964005000 Exception <a 'java/lang/ClassNotFoundException': > (0x000000078f47e668) thrown at [/build/java8-openjdk/src/jdk8u-jdk8u60-b24/hotspot/src/share/vm/prims/jni.cpp, line 735]
+Event: 23,348 Thread 0x00007f3964005000 Exception <a 'java/lang/ClassNotFoundException': > (0x000000078f47f378) thrown at [/build/java8-openjdk/src/jdk8u-jdk8u60-b24/hotspot/src/share/vm/prims/jni.cpp, line 735]
+
+Events (10 events):
+Event: 26,676 loading class com/sun/jna/WeakIdentityHashMap
+Event: 26,676 loading class com/sun/jna/WeakIdentityHashMap done
+Event: 26,677 loading class com/sun/jna/Memory$SharedMemory
+Event: 26,677 loading class com/sun/jna/Memory$SharedMemory done
+Event: 26,684 loading class overtone/sc/machinery/server/native/struct_a4c70380_b501_407e_bfc8_fab4a9b58ff0$ByReference
+Event: 26,684 loading class overtone/sc/machinery/server/native/struct_a4c70380_b501_407e_bfc8_fab4a9b58ff0$ByReference done
+Event: 26,684 loading class com/sun/jna/Structure$2$StructureSet
+Event: 26,684 loading class com/sun/jna/Structure$2$StructureSet done
+Event: 26,686 loading class com/sun/jna/NativeString
+Event: 26,686 loading class com/sun/jna/NativeString done
+
+
+Dynamic libraries:
+00400000-00401000 r-xp 00000000 08:01 2107800                            /usr/lib/jvm/java-8-openjdk/jre/bin/java
+00600000-00601000 rw-p 00000000 08:01 2107800                            /usr/lib/jvm/java-8-openjdk/jre/bin/java
+00e18000-00e39000 rw-p 00000000 00:00 0                                  [heap]
+725600000-72f300000 rw-p 00000000 00:00 0 
+72f300000-78c780000 ---p 00000000 00:00 0 
+78c780000-7bff80000 rw-p 00000000 00:00 0 
+7bff80000-7c0000000 ---p 00000000 00:00 0 
+7c0000000-7c1500000 rw-p 00000000 00:00 0 
+7c1500000-800000000 ---p 00000000 00:00 0 
+7f39058f6000-7f39058f7000 ---p 00000000 00:00 0 
+7f39058f7000-7f3906147000 rw-p 00000000 00:00 0                          [stack:23439]
+7f3906147000-7f3906148000 ---p 00000000 00:00 0 
+7f3906148000-7f3916999000 rw-p 00000000 00:00 0                          [stack:23433]
+7f3916999000-7f39169c7000 r-xp 00000000 08:03 1573287                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/DelayUGens.so
+7f39169c7000-7f3916bc7000 ---p 0002e000 08:03 1573287                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/DelayUGens.so
+7f3916bc7000-7f3916bc8000 r--p 0002e000 08:03 1573287                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/DelayUGens.so
+7f3916bc8000-7f3916bc9000 rw-p 0002f000 08:03 1573287                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/DelayUGens.so
+7f3916bc9000-7f3916bcc000 r-xp 00000000 08:03 1573170                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/SummerUGens.so
+7f3916bcc000-7f3916dcc000 ---p 00003000 08:03 1573170                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/SummerUGens.so
+7f3916dcc000-7f3916dcd000 r--p 00003000 08:03 1573170                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/SummerUGens.so
+7f3916dcd000-7f3916dce000 rw-p 00004000 08:03 1573170                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/SummerUGens.so
+7f3916dce000-7f3916dd1000 r-xp 00000000 08:03 1573163                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MembraneUGens.so
+7f3916dd1000-7f3916fd0000 ---p 00003000 08:03 1573163                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MembraneUGens.so
+7f3916fd0000-7f3916fd1000 r--p 00002000 08:03 1573163                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MembraneUGens.so
+7f3916fd1000-7f3916fd2000 rw-p 00003000 08:03 1573163                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MembraneUGens.so
+7f3916fd2000-7f3916fe2000 r-xp 00000000 08:03 1573144                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/JoshAmbiUGens.so
+7f3916fe2000-7f39171e1000 ---p 00010000 08:03 1573144                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/JoshAmbiUGens.so
+7f39171e1000-7f39171e2000 r--p 0000f000 08:03 1573144                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/JoshAmbiUGens.so
+7f39171e2000-7f39171e3000 rw-p 00010000 08:03 1573144                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/JoshAmbiUGens.so
+7f39171e3000-7f39171e8000 r-xp 00000000 08:03 1573136                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/BhobFFT.so
+7f39171e8000-7f39173e7000 ---p 00005000 08:03 1573136                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/BhobFFT.so
+7f39173e7000-7f39173e8000 r--p 00004000 08:03 1573136                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/BhobFFT.so
+7f39173e8000-7f39173e9000 rw-p 00005000 08:03 1573136                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/BhobFFT.so
+7f39173e9000-7f39173f5000 rw-p 00000000 00:00 0 
+7f39173f5000-7f39174b7000 r-xp 00000000 08:03 1573169                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/StkUGens.so
+7f39174b7000-7f39176b6000 ---p 000c2000 08:03 1573169                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/StkUGens.so
+7f39176b6000-7f39176ba000 r--p 000c1000 08:03 1573169                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/StkUGens.so
+7f39176ba000-7f39176bf000 rw-p 000c5000 08:03 1573169                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/StkUGens.so
+7f39176bf000-7f39176c6000 r-xp 00000000 08:03 1573134                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/BetablockerUGens.so
+7f39176c6000-7f39178c5000 ---p 00007000 08:03 1573134                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/BetablockerUGens.so
+7f39178c5000-7f39178c6000 r--p 00006000 08:03 1573134                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/BetablockerUGens.so
+7f39178c6000-7f39178c7000 rw-p 00007000 08:03 1573134                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/BetablockerUGens.so
+7f39178c7000-7f39178ca000 r-xp 00000000 08:03 1573142                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/DistortionUGens.so
+7f39178ca000-7f3917ac9000 ---p 00003000 08:03 1573142                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/DistortionUGens.so
+7f3917ac9000-7f3917aca000 r--p 00002000 08:03 1573142                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/DistortionUGens.so
+7f3917aca000-7f3917acb000 rw-p 00003000 08:03 1573142                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/DistortionUGens.so
+7f3917acb000-7f3917ad1000 r-xp 00000000 08:03 1573302                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/NoiseUGens.so
+7f3917ad1000-7f3917cd0000 ---p 00006000 08:03 1573302                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/NoiseUGens.so
+7f3917cd0000-7f3917cd1000 r--p 00005000 08:03 1573302                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/NoiseUGens.so
+7f3917cd1000-7f3917cd2000 rw-p 00006000 08:03 1573302                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/NoiseUGens.so
+7f3917cd2000-7f3917cdc000 r-xp 00000000 08:03 1573154                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MCLDFFTUGens.so
+7f3917cdc000-7f3917edb000 ---p 0000a000 08:03 1573154                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MCLDFFTUGens.so
+7f3917edb000-7f3917edc000 r--p 00009000 08:03 1573154                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MCLDFFTUGens.so
+7f3917edc000-7f3917edd000 rw-p 0000a000 08:03 1573154                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MCLDFFTUGens.so
+7f3917edd000-7f3917ee9000 rw-p 00000000 00:00 0 
+7f3917ee9000-7f3917f1b000 r-xp 00000000 08:03 1573285                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/BinaryOpUGens.so
+7f3917f1b000-7f391811b000 ---p 00032000 08:03 1573285                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/BinaryOpUGens.so
+7f391811b000-7f391811c000 r--p 00032000 08:03 1573285                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/BinaryOpUGens.so
+7f391811c000-7f391811d000 rw-p 00033000 08:03 1573285                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/BinaryOpUGens.so
+7f391811d000-7f3918125000 r-xp 00000000 08:03 1573304                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/PanUGens.so
+7f3918125000-7f3918324000 ---p 00008000 08:03 1573304                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/PanUGens.so
+7f3918324000-7f3918325000 r--p 00007000 08:03 1573304                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/PanUGens.so
+7f3918325000-7f3918326000 rw-p 00008000 08:03 1573304                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/PanUGens.so
+7f3918326000-7f3918327000 ---p 00000000 00:00 0 
+7f3918327000-7f3918b77000 rw-p 00000000 00:00 0                          [stack:23432]
+7f3918b77000-7f3918b78000 r-xp 00000000 08:03 1573296                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/KeyboardUGens.so
+7f3918b78000-7f3918d78000 ---p 00001000 08:03 1573296                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/KeyboardUGens.so
+7f3918d78000-7f3918d79000 r--p 00001000 08:03 1573296                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/KeyboardUGens.so
+7f3918d79000-7f3918d7a000 rw-p 00002000 08:03 1573296                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/KeyboardUGens.so
+7f3918d7a000-7f3918d86000 r-xp 00000000 08:03 1573288                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/DemandUGens.so
+7f3918d86000-7f3918f86000 ---p 0000c000 08:03 1573288                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/DemandUGens.so
+7f3918f86000-7f3918f87000 r--p 0000c000 08:03 1573288                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/DemandUGens.so
+7f3918f87000-7f3918f88000 rw-p 0000d000 08:03 1573288                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/DemandUGens.so
+7f3918f88000-7f3918f8b000 r-xp 00000000 08:03 1573155                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MCLDFilterUGens.so
+7f3918f8b000-7f391918a000 ---p 00003000 08:03 1573155                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MCLDFilterUGens.so
+7f391918a000-7f391918b000 r--p 00002000 08:03 1573155                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MCLDFilterUGens.so
+7f391918b000-7f391918c000 rw-p 00003000 08:03 1573155                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MCLDFilterUGens.so
+7f391918c000-7f3919190000 r-xp 00000000 08:03 1573127                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/AmbisonicUGens.so
+7f3919190000-7f3919390000 ---p 00004000 08:03 1573127                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/AmbisonicUGens.so
+7f3919390000-7f3919391000 r--p 00004000 08:03 1573127                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/AmbisonicUGens.so
+7f3919391000-7f3919392000 rw-p 00005000 08:03 1573127                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/AmbisonicUGens.so
+7f3919392000-7f3919395000 r-xp 00000000 08:03 1573160                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MCLDTreeUGens.so
+7f3919395000-7f3919594000 ---p 00003000 08:03 1573160                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MCLDTreeUGens.so
+7f3919594000-7f3919595000 r--p 00002000 08:03 1573160                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MCLDTreeUGens.so
+7f3919595000-7f3919596000 rw-p 00003000 08:03 1573160                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MCLDTreeUGens.so
+7f3919596000-7f39195a2000 r-xp 00000000 08:03 1573291                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/FFT_UGens.so
+7f39195a2000-7f39197a2000 ---p 0000c000 08:03 1573291                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/FFT_UGens.so
+7f39197a2000-7f39197a3000 r--p 0000c000 08:03 1573291                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/FFT_UGens.so
+7f39197a3000-7f39197a4000 rw-p 0000d000 08:03 1573291                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/FFT_UGens.so
+7f39197a4000-7f39197d4000 rw-p 00000000 00:00 0 
+7f39197d4000-7f39197d9000 r-xp 00000000 08:03 1573152                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MCLDChaosUGens.so
+7f39197d9000-7f39199d8000 ---p 00005000 08:03 1573152                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MCLDChaosUGens.so
+7f39199d8000-7f39199d9000 r--p 00004000 08:03 1573152                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MCLDChaosUGens.so
+7f39199d9000-7f39199da000 rw-p 00005000 08:03 1573152                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MCLDChaosUGens.so
+7f39199da000-7f39199dd000 r-xp 00000000 08:03 1573162                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MdaUGens.so
+7f39199dd000-7f3919bdc000 ---p 00003000 08:03 1573162                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MdaUGens.so
+7f3919bdc000-7f3919bdd000 r--p 00002000 08:03 1573162                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MdaUGens.so
+7f3919bdd000-7f3919cfc000 rw-p 00003000 08:03 1573162                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MdaUGens.so
+7f3919cfc000-7f3919d0f000 r-xp 00000000 08:03 1573310                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/UnaryOpUGens.so
+7f3919d0f000-7f3919f0f000 ---p 00013000 08:03 1573310                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/UnaryOpUGens.so
+7f3919f0f000-7f3919f10000 r--p 00013000 08:03 1573310                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/UnaryOpUGens.so
+7f3919f10000-7f3919f11000 rw-p 00014000 08:03 1573310                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/UnaryOpUGens.so
+7f3919f11000-7f3919f14000 r-xp 00000000 08:03 1573290                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/DynNoiseUGens.so
+7f3919f14000-7f391a113000 ---p 00003000 08:03 1573290                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/DynNoiseUGens.so
+7f391a113000-7f391a114000 r--p 00002000 08:03 1573290                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/DynNoiseUGens.so
+7f391a114000-7f391a115000 rw-p 00003000 08:03 1573290                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/DynNoiseUGens.so
+7f391a115000-7f391a116000 ---p 00000000 00:00 0 
+7f391a116000-7f391a966000 rw-p 00000000 00:00 0                          [stack:23431]
+7f391a966000-7f391a969000 r-xp 00000000 08:03 1573289                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/DiskIO_UGens.so
+7f391a969000-7f391ab69000 ---p 00003000 08:03 1573289                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/DiskIO_UGens.so
+7f391ab69000-7f391ab6a000 r--p 00003000 08:03 1573289                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/DiskIO_UGens.so
+7f391ab6a000-7f391ab6b000 rw-p 00004000 08:03 1573289                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/DiskIO_UGens.so
+7f391ab6b000-7f391ab6c000 rw-p 00000000 00:00 0 
+7f391ab6c000-7f391ab74000 r-xp 00000000 08:03 1573167                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/RMEQSuite.so
+7f391ab74000-7f391ad73000 ---p 00008000 08:03 1573167                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/RMEQSuite.so
+7f391ad73000-7f391ad74000 r--p 00007000 08:03 1573167                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/RMEQSuite.so
+7f391ad74000-7f391ad75000 rw-p 00008000 08:03 1573167                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/RMEQSuite.so
+7f391ad75000-7f391ad87000 r-xp 00000000 08:03 1573297                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/LFUGens.so
+7f391ad87000-7f391af87000 ---p 00012000 08:03 1573297                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/LFUGens.so
+7f391af87000-7f391af88000 r--p 00012000 08:03 1573297                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/LFUGens.so
+7f391af88000-7f391af89000 rw-p 00013000 08:03 1573297                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/LFUGens.so
+7f391af89000-7f391af91000 r-xp 00000000 08:03 1573173                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/VBAP.so
+7f391af91000-7f391b190000 ---p 00008000 08:03 1573173                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/VBAP.so
+7f391b190000-7f391b191000 r--p 00007000 08:03 1573173                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/VBAP.so
+7f391b191000-7f391b192000 rw-p 00008000 08:03 1573173                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/VBAP.so
+7f391b192000-7f391b1a3000 r-xp 00000000 08:03 1573303                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/OscUGens.so
+7f391b1a3000-7f391b3a2000 ---p 00011000 08:03 1573303                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/OscUGens.so
+7f391b3a2000-7f391b3a3000 r--p 00010000 08:03 1573303                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/OscUGens.so
+7f391b3a3000-7f391b3a4000 rw-p 00011000 08:03 1573303                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/OscUGens.so
+7f391b3a4000-7f391b3a7000 r-xp 00000000 08:03 1573293                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/GendynUGens.so
+7f391b3a7000-7f391b5a6000 ---p 00003000 08:03 1573293                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/GendynUGens.so
+7f391b5a6000-7f391b5a7000 r--p 00002000 08:03 1573293                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/GendynUGens.so
+7f391b5a7000-7f391b5a8000 rw-p 00003000 08:03 1573293                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/GendynUGens.so
+7f391b5a8000-7f391b5ac000 r-xp 00000000 08:03 1573129                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/AY_UGen.so
+7f391b5ac000-7f391b7ab000 ---p 00004000 08:03 1573129                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/AY_UGen.so
+7f391b7ab000-7f391b7ac000 r--p 00003000 08:03 1573129                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/AY_UGen.so
+7f391b7ac000-7f391b7ad000 rw-p 00004000 08:03 1573129                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/AY_UGen.so
+7f391b7ad000-7f391b7af000 rw-p 00000000 00:00 0 
+7f391b7af000-7f391b7b0000 ---p 00000000 00:00 0 
+7f391b7b0000-7f391c000000 rw-p 00000000 00:00 0                          [stack:23430]
+7f391c000000-7f391c021000 rw-p 00000000 00:00 0 
+7f391c021000-7f3920000000 ---p 00000000 00:00 0 
+7f3920049000-7f392004b000 r-xp 00000000 08:03 1573156                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MCLDGetenvUGen.so
+7f392004b000-7f392024a000 ---p 00002000 08:03 1573156                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MCLDGetenvUGen.so
+7f392024a000-7f392024b000 r--p 00001000 08:03 1573156                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MCLDGetenvUGen.so
+7f392024b000-7f392024c000 rw-p 00002000 08:03 1573156                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MCLDGetenvUGen.so
+7f392024c000-7f3920267000 r-xp 00000000 08:03 1573128                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/AtkUGens.so
+7f3920267000-7f3920467000 ---p 0001b000 08:03 1573128                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/AtkUGens.so
+7f3920467000-7f3920468000 r--p 0001b000 08:03 1573128                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/AtkUGens.so
+7f3920468000-7f3920469000 rw-p 0001c000 08:03 1573128                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/AtkUGens.so
+7f3920469000-7f392046c000 r-xp 00000000 08:03 1573300                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MouseUGens.so
+7f392046c000-7f392066b000 ---p 00003000 08:03 1573300                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MouseUGens.so
+7f392066b000-7f392066c000 r--p 00002000 08:03 1573300                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MouseUGens.so
+7f392066c000-7f392066d000 rw-p 00003000 08:03 1573300                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MouseUGens.so
+7f392066d000-7f3920672000 r-xp 00000000 08:03 1573141                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/Concat.so
+7f3920672000-7f3920871000 ---p 00005000 08:03 1573141                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/Concat.so
+7f3920871000-7f3920872000 r--p 00004000 08:03 1573141                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/Concat.so
+7f3920872000-7f3920873000 rw-p 00005000 08:03 1573141                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/Concat.so
+7f3920873000-7f3920880000 r-xp 00000000 08:03 1573164                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/NCAnalysisUGens.so
+7f3920880000-7f3920a7f000 ---p 0000d000 08:03 1573164                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/NCAnalysisUGens.so
+7f3920a7f000-7f3920a80000 r--p 0000c000 08:03 1573164                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/NCAnalysisUGens.so
+7f3920a80000-7f3920a81000 rw-p 0000d000 08:03 1573164                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/NCAnalysisUGens.so
+7f3920a81000-7f3920acc000 rw-p 00000000 00:00 0 
+7f3920acc000-7f3920ad3000 r-xp 00000000 08:03 1573286                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/ChaosUGens.so
+7f3920ad3000-7f3920cd2000 ---p 00007000 08:03 1573286                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/ChaosUGens.so
+7f3920cd2000-7f3920cd3000 r--p 00006000 08:03 1573286                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/ChaosUGens.so
+7f3920cd3000-7f3920cd4000 rw-p 00007000 08:03 1573286                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/ChaosUGens.so
+7f3920cd4000-7f3920cd8000 r-xp 00000000 08:03 1573150                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MCLDBufferUGens.so
+7f3920cd8000-7f3920ed7000 ---p 00004000 08:03 1573150                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MCLDBufferUGens.so
+7f3920ed7000-7f3920ed8000 r--p 00003000 08:03 1573150                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MCLDBufferUGens.so
+7f3920ed8000-7f3920ed9000 rw-p 00004000 08:03 1573150                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MCLDBufferUGens.so
+7f3920ed9000-7f3920edb000 r-xp 00000000 08:03 1573305                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/PhysicalModelingUGens.so
+7f3920edb000-7f39210da000 ---p 00002000 08:03 1573305                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/PhysicalModelingUGens.so
+7f39210da000-7f39210db000 r--p 00001000 08:03 1573305                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/PhysicalModelingUGens.so
+7f39210db000-7f39210dc000 rw-p 00002000 08:03 1573305                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/PhysicalModelingUGens.so
+7f39210dc000-7f39210e8000 r-xp 00000000 08:03 1573309                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/TriggerUGens.so
+7f39210e8000-7f39212e7000 ---p 0000c000 08:03 1573309                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/TriggerUGens.so
+7f39212e7000-7f39212e8000 r--p 0000b000 08:03 1573309                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/TriggerUGens.so
+7f39212e8000-7f39212e9000 rw-p 0000c000 08:03 1573309                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/TriggerUGens.so
+7f39212e9000-7f39212fc000 r-xp 00000000 08:03 1573146                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/JoshPVUGens.so
+7f39212fc000-7f39214fb000 ---p 00013000 08:03 1573146                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/JoshPVUGens.so
+7f39214fb000-7f39214fc000 r--p 00012000 08:03 1573146                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/JoshPVUGens.so
+7f39214fc000-7f39214fd000 rw-p 00013000 08:03 1573146                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/JoshPVUGens.so
+7f39214fd000-7f3921509000 rw-p 00000000 00:00 0 
+7f3921509000-7f392150f000 r-xp 00000000 08:03 1573132                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/BBCut2UGens.so
+7f392150f000-7f392170e000 ---p 00006000 08:03 1573132                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/BBCut2UGens.so
+7f392170e000-7f392170f000 r--p 00005000 08:03 1573132                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/BBCut2UGens.so
+7f392170f000-7f3921711000 rw-p 00006000 08:03 1573132                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/BBCut2UGens.so
+7f3921711000-7f392171c000 r-xp 00000000 08:03 1573135                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/BhobChaos.so
+7f392171c000-7f392191b000 ---p 0000b000 08:03 1573135                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/BhobChaos.so
+7f392191b000-7f392191c000 r--p 0000a000 08:03 1573135                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/BhobChaos.so
+7f392191c000-7f392191d000 rw-p 0000b000 08:03 1573135                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/BhobChaos.so
+7f392191d000-7f392192f000 r-xp 00000000 08:03 1573133                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/BerlachUGens.so
+7f392192f000-7f3921b2e000 ---p 00012000 08:03 1573133                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/BerlachUGens.so
+7f3921b2e000-7f3921b2f000 r--p 00011000 08:03 1573133                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/BerlachUGens.so
+7f3921b2f000-7f3921b30000 rw-p 00012000 08:03 1573133                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/BerlachUGens.so
+7f3921b30000-7f3921b46000 r-xp 00000000 08:03 1573137                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/BhobFilt.so
+7f3921b46000-7f3921d45000 ---p 00016000 08:03 1573137                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/BhobFilt.so
+7f3921d45000-7f3921d46000 r--p 00015000 08:03 1573137                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/BhobFilt.so
+7f3921d46000-7f3921d47000 rw-p 00016000 08:03 1573137                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/BhobFilt.so
+7f3921d47000-7f3921d4d000 r-xp 00000000 08:03 1573301                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MulAddUGens.so
+7f3921d4d000-7f3921f4c000 ---p 00006000 08:03 1573301                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MulAddUGens.so
+7f3921f4c000-7f3921f4d000 r--p 00005000 08:03 1573301                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MulAddUGens.so
+7f3921f4d000-7f3921f4e000 rw-p 00006000 08:03 1573301                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MulAddUGens.so
+7f3921f4e000-7f3921f6a000 r-xp 00000000 08:03 1573292                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/FilterUGens.so
+7f3921f6a000-7f3922169000 ---p 0001c000 08:03 1573292                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/FilterUGens.so
+7f3922169000-7f392216a000 r--p 0001b000 08:03 1573292                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/FilterUGens.so
+7f392216a000-7f392216b000 rw-p 0001c000 08:03 1573292                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/FilterUGens.so
+7f392216b000-7f392216e000 r-xp 00000000 08:03 1573149                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/LoopBuf.so
+7f392216e000-7f392236d000 ---p 00003000 08:03 1573149                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/LoopBuf.so
+7f392236d000-7f392236e000 r--p 00002000 08:03 1573149                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/LoopBuf.so
+7f392236e000-7f392236f000 rw-p 00003000 08:03 1573149                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/LoopBuf.so
+7f392236f000-7f392238d000 r-xp 00000000 08:03 1573147                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/JoshUGens.so
+7f392238d000-7f392258d000 ---p 0001e000 08:03 1573147                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/JoshUGens.so
+7f392258d000-7f392258e000 r--p 0001e000 08:03 1573147                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/JoshUGens.so
+7f392258e000-7f392258f000 rw-p 0001f000 08:03 1573147                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/JoshUGens.so
+7f392258f000-7f3922597000 r-xp 00000000 08:03 1573172                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/TJUGens.so
+7f3922597000-7f3922796000 ---p 00008000 08:03 1573172                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/TJUGens.so
+7f3922796000-7f3922797000 r--p 00007000 08:03 1573172                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/TJUGens.so
+7f3922797000-7f3922798000 rw-p 00008000 08:03 1573172                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/TJUGens.so
+7f3922798000-7f39227a6000 r-xp 00000000 08:03 1573168                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/SLUGens.so
+7f39227a6000-7f39229a5000 ---p 0000e000 08:03 1573168                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/SLUGens.so
+7f39229a5000-7f39229a6000 r--p 0000d000 08:03 1573168                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/SLUGens.so
+7f39229a6000-7f39229a7000 rw-p 0000e000 08:03 1573168                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/SLUGens.so
+7f39229a7000-7f39229ab000 r-xp 00000000 08:03 1573131                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/BatUGens.so
+7f39229ab000-7f3922baa000 ---p 00004000 08:03 1573131                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/BatUGens.so
+7f3922baa000-7f3922bab000 r--p 00003000 08:03 1573131                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/BatUGens.so
+7f3922bab000-7f3922bac000 rw-p 00004000 08:03 1573131                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/BatUGens.so
+7f3922bac000-7f3922bc4000 r-xp 00000000 08:03 1573294                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/GrainUGens.so
+7f3922bc4000-7f3922dc3000 ---p 00018000 08:03 1573294                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/GrainUGens.so
+7f3922dc3000-7f3922dc4000 r--p 00017000 08:03 1573294                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/GrainUGens.so
+7f3922dc4000-7f3922dc5000 rw-p 00018000 08:03 1573294                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/GrainUGens.so
+7f3922dc5000-7f3922dca000 r-xp 00000000 08:03 1573138                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/BhobGrain.so
+7f3922dca000-7f3922fca000 ---p 00005000 08:03 1573138                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/BhobGrain.so
+7f3922fca000-7f3922fcb000 r--p 00005000 08:03 1573138                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/BhobGrain.so
+7f3922fcb000-7f3922fcc000 rw-p 00006000 08:03 1573138                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/BhobGrain.so
+7f3922fcc000-7f3922fd8000 r-xp 00000000 08:03 1573165                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/PitchDetection.so
+7f3922fd8000-7f39231d7000 ---p 0000c000 08:03 1573165                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/PitchDetection.so
+7f39231d7000-7f39231d8000 r--p 0000b000 08:03 1573165                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/PitchDetection.so
+7f39231d8000-7f39231d9000 rw-p 0000c000 08:03 1573165                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/PitchDetection.so
+7f39231d9000-7f39231db000 r-xp 00000000 08:03 1573153                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MCLDDistortionUGens.so
+7f39231db000-7f39233da000 ---p 00002000 08:03 1573153                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MCLDDistortionUGens.so
+7f39233da000-7f39233db000 r--p 00001000 08:03 1573153                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MCLDDistortionUGens.so
+7f39233db000-7f39233dc000 rw-p 00002000 08:03 1573153                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MCLDDistortionUGens.so
+7f39233dc000-7f39233e0000 r-xp 00000000 08:03 1573159                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MCLDSOMUGens.so
+7f39233e0000-7f39235df000 ---p 00004000 08:03 1573159                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MCLDSOMUGens.so
+7f39235df000-7f39235e0000 r--p 00003000 08:03 1573159                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MCLDSOMUGens.so
+7f39235e0000-7f39235e1000 rw-p 00004000 08:03 1573159                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MCLDSOMUGens.so
+7f39235e1000-7f39235e3000 r-xp 00000000 08:03 1573148                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/LadspaUGen.so
+7f39235e3000-7f39237e3000 ---p 00002000 08:03 1573148                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/LadspaUGen.so
+7f39237e3000-7f39237e4000 r--p 00002000 08:03 1573148                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/LadspaUGen.so
+7f39237e4000-7f39237e5000 rw-p 00003000 08:03 1573148                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/LadspaUGen.so
+7f39237e5000-7f39237e8000 r-xp 00000000 08:03 1573140                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/BlackrainUGens.so
+7f39237e8000-7f39239e8000 ---p 00003000 08:03 1573140                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/BlackrainUGens.so
+7f39239e8000-7f39239e9000 r--p 00003000 08:03 1573140                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/BlackrainUGens.so
+7f39239e9000-7f39239ea000 rw-p 00004000 08:03 1573140                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/BlackrainUGens.so
+7f39239ea000-7f39239ec000 r-xp 00000000 08:03 1573158                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MCLDPollUGens.so
+7f39239ec000-7f3923beb000 ---p 00002000 08:03 1573158                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MCLDPollUGens.so
+7f3923beb000-7f3923bec000 r--p 00001000 08:03 1573158                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MCLDPollUGens.so
+7f3923bec000-7f3923bed000 rw-p 00002000 08:03 1573158                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MCLDPollUGens.so
+7f3923bed000-7f3923bef000 r-xp 00000000 08:03 1573130                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/BatPVUgens.so
+7f3923bef000-7f3923dee000 ---p 00002000 08:03 1573130                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/BatPVUgens.so
+7f3923dee000-7f3923def000 r--p 00001000 08:03 1573130                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/BatPVUgens.so
+7f3923def000-7f3923df0000 rw-p 00002000 08:03 1573130                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/BatPVUgens.so
+7f3923df0000-7f3923dfc000 rw-p 00000000 00:00 0 
+7f3923dfc000-7f3923dff000 r-xp 00000000 08:03 1573143                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/GlitchUGens.so
+7f3923dff000-7f3923ffe000 ---p 00003000 08:03 1573143                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/GlitchUGens.so
+7f3923ffe000-7f3923fff000 r--p 00002000 08:03 1573143                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/GlitchUGens.so
+7f3923fff000-7f3924000000 rw-p 00003000 08:03 1573143                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/GlitchUGens.so
+7f3924000000-7f3924021000 rw-p 00000000 00:00 0 
+7f3924021000-7f3928000000 ---p 00000000 00:00 0 
+7f39281d5000-7f39281d7000 r-xp 00000000 08:03 1573311                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/UnpackFFTUGens.so
+7f39281d7000-7f39283d6000 ---p 00002000 08:03 1573311                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/UnpackFFTUGens.so
+7f39283d6000-7f39283d7000 r--p 00001000 08:03 1573311                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/UnpackFFTUGens.so
+7f39283d7000-7f39283d8000 rw-p 00002000 08:03 1573311                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/UnpackFFTUGens.so
+7f39283d8000-7f39283e4000 rw-p 00000000 00:00 0 
+7f39283e4000-7f39283e6000 r-xp 00000000 08:03 1573161                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MCLDTriggeredStatsUgens.so
+7f39283e6000-7f39285e5000 ---p 00002000 08:03 1573161                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MCLDTriggeredStatsUgens.so
+7f39285e5000-7f39285e6000 r--p 00001000 08:03 1573161                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MCLDTriggeredStatsUgens.so
+7f39285e6000-7f39285e7000 rw-p 00002000 08:03 1573161                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MCLDTriggeredStatsUgens.so
+7f39285e7000-7f39285ea000 r-xp 00000000 08:03 1573151                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MCLDCepstrumUGens.so
+7f39285ea000-7f39287e9000 ---p 00003000 08:03 1573151                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MCLDCepstrumUGens.so
+7f39287e9000-7f39287ea000 r--p 00002000 08:03 1573151                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MCLDCepstrumUGens.so
+7f39287ea000-7f39287eb000 rw-p 00003000 08:03 1573151                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MCLDCepstrumUGens.so
+7f39287eb000-7f39287f7000 rw-p 00000000 00:00 0 
+7f39287f7000-7f3928831000 r-xp 00000000 08:03 1573145                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/JoshGrainUGens.so
+7f3928831000-7f3928a30000 ---p 0003a000 08:03 1573145                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/JoshGrainUGens.so
+7f3928a30000-7f3928a31000 r--p 00039000 08:03 1573145                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/JoshGrainUGens.so
+7f3928a31000-7f3928a32000 rw-p 0003a000 08:03 1573145                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/JoshGrainUGens.so
+7f3928a32000-7f3928a38000 r-xp 00000000 08:03 1573139                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/BhobNoise.so
+7f3928a38000-7f3928c37000 ---p 00006000 08:03 1573139                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/BhobNoise.so
+7f3928c37000-7f3928c38000 r--p 00005000 08:03 1573139                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/BhobNoise.so
+7f3928c38000-7f3928c39000 rw-p 00006000 08:03 1573139                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/BhobNoise.so
+7f3928c39000-7f3928c3f000 r-xp 00000000 08:03 1573295                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/IOUGens.so
+7f3928c3f000-7f3928e3f000 ---p 00006000 08:03 1573295                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/IOUGens.so
+7f3928e3f000-7f3928e40000 r--p 00006000 08:03 1573295                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/IOUGens.so
+7f3928e40000-7f3928e41000 rw-p 00007000 08:03 1573295                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/IOUGens.so
+7f3928e41000-7f3928e43000 r-xp 00000000 08:03 1573308                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/TestUGens.so
+7f3928e43000-7f3929042000 ---p 00002000 08:03 1573308                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/TestUGens.so
+7f3929042000-7f3929043000 r--p 00001000 08:03 1573308                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/TestUGens.so
+7f3929043000-7f3929044000 rw-p 00002000 08:03 1573308                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/TestUGens.so
+7f3929044000-7f392904a000 r-xp 00000000 08:03 1573307                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/ReverbUGens.so
+7f392904a000-7f3929249000 ---p 00006000 08:03 1573307                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/ReverbUGens.so
+7f3929249000-7f392924a000 r--p 00005000 08:03 1573307                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/ReverbUGens.so
+7f392924a000-7f392924b000 rw-p 00006000 08:03 1573307                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/ReverbUGens.so
+7f392924b000-7f392924f000 r-xp 00000000 08:03 1573171                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/TagSystemUgens.so
+7f392924f000-7f392944e000 ---p 00004000 08:03 1573171                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/TagSystemUgens.so
+7f392944e000-7f392944f000 r--p 00003000 08:03 1573171                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/TagSystemUgens.so
+7f392944f000-7f3929450000 rw-p 00004000 08:03 1573171                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/TagSystemUgens.so
+7f3929450000-7f3929453000 r-xp 00000000 08:03 1573174                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/VOSIM.so
+7f3929453000-7f3929652000 ---p 00003000 08:03 1573174                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/VOSIM.so
+7f3929652000-7f3929653000 r--p 00002000 08:03 1573174                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/VOSIM.so
+7f3929653000-7f3929654000 rw-p 00003000 08:03 1573174                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/VOSIM.so
+7f3929654000-7f392965a000 r-xp 00000000 08:03 1573306                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/PV_ThirdParty.so
+7f392965a000-7f392985a000 ---p 00006000 08:03 1573306                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/PV_ThirdParty.so
+7f392985a000-7f392985b000 r--p 00006000 08:03 1573306                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/PV_ThirdParty.so
+7f392985b000-7f392985c000 rw-p 00007000 08:03 1573306                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/PV_ThirdParty.so
+7f392985c000-7f392988c000 rw-p 00000000 00:00 0 
+7f392988c000-7f392988e000 r-xp 00000000 08:03 1573166                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/RFWUGens.so
+7f392988e000-7f3929a8d000 ---p 00002000 08:03 1573166                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/RFWUGens.so
+7f3929a8d000-7f3929a8e000 r--p 00001000 08:03 1573166                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/RFWUGens.so
+7f3929a8e000-7f3929a8f000 rw-p 00002000 08:03 1573166                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/RFWUGens.so
+7f3929a8f000-7f3929a99000 r-xp 00000000 08:03 1573299                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/ML_UGens.so
+7f3929a99000-7f3929c98000 ---p 0000a000 08:03 1573299                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/ML_UGens.so
+7f3929c98000-7f3929c99000 r--p 00009000 08:03 1573299                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/ML_UGens.so
+7f3929c99000-7f3929ca1000 rw-p 0000a000 08:03 1573299                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/ML_UGens.so
+7f3929ca1000-7f3929cdd000 rw-p 00000000 00:00 0 
+7f3929cdd000-7f3929cdf000 r-xp 00000000 08:03 1573157                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MCLDOscUGens.so
+7f3929cdf000-7f3929ede000 ---p 00002000 08:03 1573157                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MCLDOscUGens.so
+7f3929ede000-7f3929edf000 r--p 00001000 08:03 1573157                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MCLDOscUGens.so
+7f3929edf000-7f3929ee0000 rw-p 00002000 08:03 1573157                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/MCLDOscUGens.so
+7f3929ee0000-7f3929ee3000 ---p 00000000 00:00 0 
+7f3929ee3000-7f3929fe1000 rw-p 00000000 00:00 0                          [stack:23429]
+7f3929fe1000-7f3929fe4000 ---p 00000000 00:00 0 
+7f3929fe4000-7f392a0e2000 rw-p 00000000 00:00 0                          [stack:23428]
+7f392a0e2000-7f392a0e5000 ---p 00000000 00:00 0 
+7f392a0e5000-7f392a1e3000 rw-p 00000000 00:00 0                          [stack:23427]
+7f392a1e3000-7f392a1eb000 r-xp 00000000 08:01 2107773                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libmanagement.so
+7f392a1eb000-7f392a3eb000 ---p 00008000 08:01 2107773                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libmanagement.so
+7f392a3eb000-7f392a3ec000 rw-p 00008000 08:01 2107773                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libmanagement.so
+7f392a3ec000-7f392a5ac000 rw-p 00000000 00:00 0 
+7f392a5ac000-7f392a5ec000 ---p 00000000 00:00 0 
+7f392a5ec000-7f392a6df000 r-xp 00000000 08:01 1990230                    /usr/lib/libasound.so.2.0.0
+7f392a6df000-7f392a8de000 ---p 000f3000 08:01 1990230                    /usr/lib/libasound.so.2.0.0
+7f392a8de000-7f392a8e5000 r--p 000f2000 08:01 1990230                    /usr/lib/libasound.so.2.0.0
+7f392a8e5000-7f392a8e7000 rw-p 000f9000 08:01 1990230                    /usr/lib/libasound.so.2.0.0
+7f392a8e7000-7f392a8f6000 r-xp 00000000 08:01 2107804                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libjsoundalsa.so
+7f392a8f6000-7f392aaf5000 ---p 0000f000 08:01 2107804                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libjsoundalsa.so
+7f392aaf5000-7f392aaf6000 rw-p 0000e000 08:01 2107804                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libjsoundalsa.so
+7f392aaf6000-7f392aaf7000 r-xp 00000000 08:01 2107803                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libjsound.so
+7f392aaf7000-7f392acf6000 ---p 00001000 08:01 2107803                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libjsound.so
+7f392acf6000-7f392acf7000 rw-p 00000000 08:01 2107803                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libjsound.so
+7f392acf7000-7f392aef7000 rw-p 00000000 00:00 0 
+7f392aef7000-7f392b0f7000 rw-p 00000000 00:00 0 
+7f392b0f7000-7f392b2f7000 rw-p 00000000 00:00 0 
+7f392b2f7000-7f392b2fa000 ---p 00000000 00:00 0 
+7f392b2fa000-7f392b3f8000 rw-p 00000000 00:00 0                          [stack:23426]
+7f392b3f8000-7f392b3fb000 ---p 00000000 00:00 0 
+7f392b3fb000-7f392b4f9000 rw-p 00000000 00:00 0                          [stack:23425]
+7f392b4f9000-7f392b4fc000 ---p 00000000 00:00 0 
+7f392b4fc000-7f392b5fa000 rw-p 00000000 00:00 0                          [stack:23424]
+7f392b5fa000-7f392b5fd000 ---p 00000000 00:00 0 
+7f392b5fd000-7f392b8fb000 rw-p 00000000 00:00 0                          [stack:23423]
+7f392b8fb000-7f392b8fe000 ---p 00000000 00:00 0 
+7f392b8fe000-7f392b9fc000 rw-p 00000000 00:00 0                          [stack:23422]
+7f392b9fc000-7f392b9ff000 ---p 00000000 00:00 0 
+7f392b9ff000-7f392bcfd000 rw-p 00000000 00:00 0                          [stack:23421]
+7f392bcfd000-7f392bd00000 ---p 00000000 00:00 0 
+7f392bd00000-7f392bdfe000 rw-p 00000000 00:00 0                          [stack:23420]
+7f392bdfe000-7f392be01000 ---p 00000000 00:00 0 
+7f392be01000-7f392beff000 rw-p 00000000 00:00 0                          [stack:23419]
+7f392beff000-7f392bf02000 ---p 00000000 00:00 0 
+7f392bf02000-7f392c000000 rw-p 00000000 00:00 0                          [stack:23418]
+7f392c000000-7f392c021000 rw-p 00000000 00:00 0 
+7f392c021000-7f3930000000 ---p 00000000 00:00 0 
+7f3930000000-7f3930021000 rw-p 00000000 00:00 0 
+7f3930021000-7f3934000000 ---p 00000000 00:00 0 
+7f3934000000-7f3934021000 rw-p 00000000 00:00 0 
+7f3934021000-7f3938000000 ---p 00000000 00:00 0 
+7f39380dc000-7f39382dc000 rw-p 00000000 00:00 0 
+7f39382dc000-7f39382df000 ---p 00000000 00:00 0 
+7f39382df000-7f39383dd000 rw-p 00000000 00:00 0                          [stack:23417]
+7f39383dd000-7f39383e0000 ---p 00000000 00:00 0 
+7f39383e0000-7f39384de000 rw-p 00000000 00:00 0                          [stack:23416]
+7f39384de000-7f39384e1000 ---p 00000000 00:00 0 
+7f39384e1000-7f39385df000 rw-p 00000000 00:00 0                          [stack:23415]
+7f39385df000-7f39385e3000 r-xp 00000000 08:01 1972436                    /usr/lib/libattr.so.1.1.0
+7f39385e3000-7f39387e2000 ---p 00004000 08:01 1972436                    /usr/lib/libattr.so.1.1.0
+7f39387e2000-7f39387e3000 r--p 00003000 08:01 1972436                    /usr/lib/libattr.so.1.1.0
+7f39387e3000-7f39387e4000 rw-p 00004000 08:01 1972436                    /usr/lib/libattr.so.1.1.0
+7f39387e4000-7f39387e8000 r-xp 00000000 08:01 1972582                    /usr/lib/libcap.so.2.24
+7f39387e8000-7f39389e7000 ---p 00004000 08:01 1972582                    /usr/lib/libcap.so.2.24
+7f39389e7000-7f39389e8000 rw-p 00003000 08:01 1972582                    /usr/lib/libcap.so.2.24
+7f39389e8000-7f39389fa000 r-xp 00000000 08:01 1976409                    /usr/lib/libgpg-error.so.0.16.0
+7f39389fa000-7f3938bf9000 ---p 00012000 08:01 1976409                    /usr/lib/libgpg-error.so.0.16.0
+7f3938bf9000-7f3938bfa000 r--p 00011000 08:01 1976409                    /usr/lib/libgpg-error.so.0.16.0
+7f3938bfa000-7f3938bfb000 rw-p 00012000 08:01 1976409                    /usr/lib/libgpg-error.so.0.16.0
+7f3938bfb000-7f3938cd3000 r-xp 00000000 08:01 1976418                    /usr/lib/libgcrypt.so.20.0.4
+7f3938cd3000-7f3938ed3000 ---p 000d8000 08:01 1976418                    /usr/lib/libgcrypt.so.20.0.4
+7f3938ed3000-7f3938ed4000 r--p 000d8000 08:01 1976418                    /usr/lib/libgcrypt.so.20.0.4
+7f3938ed4000-7f3938edc000 rw-p 000d9000 08:01 1976418                    /usr/lib/libgcrypt.so.20.0.4
+7f3938edc000-7f3938edd000 rw-p 00000000 00:00 0 
+7f3938edd000-7f3938eee000 r-xp 00000000 08:01 1976434                    /usr/lib/liblz4.so.1.7.1
+7f3938eee000-7f39390ed000 ---p 00011000 08:01 1976434                    /usr/lib/liblz4.so.1.7.1
+7f39390ed000-7f39390ee000 r--p 00010000 08:01 1976434                    /usr/lib/liblz4.so.1.7.1
+7f39390ee000-7f39390ef000 rw-p 00011000 08:01 1976434                    /usr/lib/liblz4.so.1.7.1
+7f39390ef000-7f3939114000 r-xp 00000000 08:01 1976437                    /usr/lib/liblzma.so.5.2.2
+7f3939114000-7f3939313000 ---p 00025000 08:01 1976437                    /usr/lib/liblzma.so.5.2.2
+7f3939313000-7f3939314000 r--p 00024000 08:01 1976437                    /usr/lib/liblzma.so.5.2.2
+7f3939314000-7f3939315000 rw-p 00025000 08:01 1976437                    /usr/lib/liblzma.so.5.2.2
+7f3939315000-7f3939329000 r-xp 00000000 08:01 1969334                    /usr/lib/libresolv-2.22.so
+7f3939329000-7f3939528000 ---p 00014000 08:01 1969334                    /usr/lib/libresolv-2.22.so
+7f3939528000-7f3939529000 r--p 00013000 08:01 1969334                    /usr/lib/libresolv-2.22.so
+7f3939529000-7f393952a000 rw-p 00014000 08:01 1969334                    /usr/lib/libresolv-2.22.so
+7f393952a000-7f393952c000 rw-p 00000000 00:00 0 
+7f393952c000-7f39395ab000 r-xp 00000000 08:01 1976505                    /usr/lib/libsystemd.so.0.12.0
+7f39395ab000-7f39395ac000 ---p 0007f000 08:01 1976505                    /usr/lib/libsystemd.so.0.12.0
+7f39395ac000-7f39395af000 r--p 0007f000 08:01 1976505                    /usr/lib/libsystemd.so.0.12.0
+7f39395af000-7f39395b0000 rw-p 00082000 08:01 1976505                    /usr/lib/libsystemd.so.0.12.0
+7f39395b0000-7f3939765000 r-xp 00000000 08:01 1972649                    /usr/lib/libdb-5.3.so
+7f3939765000-7f3939965000 ---p 001b5000 08:01 1972649                    /usr/lib/libdb-5.3.so
+7f3939965000-7f393996d000 r--p 001b5000 08:01 1972649                    /usr/lib/libdb-5.3.so
+7f393996d000-7f3939970000 rw-p 001bd000 08:01 1972649                    /usr/lib/libdb-5.3.so
+7f3939970000-7f3939976000 r-xp 00000000 08:01 1990237                    /usr/lib/libogg.so.0.8.2
+7f3939976000-7f3939b75000 ---p 00006000 08:01 1990237                    /usr/lib/libogg.so.0.8.2
+7f3939b75000-7f3939b76000 r--p 00005000 08:01 1990237                    /usr/lib/libogg.so.0.8.2
+7f3939b76000-7f3939b77000 rw-p 00006000 08:01 1990237                    /usr/lib/libogg.so.0.8.2
+7f3939b77000-7f3939ba2000 r-xp 00000000 08:01 1990255                    /usr/lib/libvorbis.so.0.4.8
+7f3939ba2000-7f3939da2000 ---p 0002b000 08:01 1990255                    /usr/lib/libvorbis.so.0.4.8
+7f3939da2000-7f3939da3000 r--p 0002b000 08:01 1990255                    /usr/lib/libvorbis.so.0.4.8
+7f3939da3000-7f3939da4000 rw-p 0002c000 08:01 1990255                    /usr/lib/libvorbis.so.0.4.8
+7f3939da4000-7f3939e35000 r-xp 00000000 08:01 1990252                    /usr/lib/libvorbisenc.so.2.0.11
+7f3939e35000-7f393a034000 ---p 00091000 08:01 1990252                    /usr/lib/libvorbisenc.so.2.0.11
+7f393a034000-7f393a056000 r--p 00090000 08:01 1990252                    /usr/lib/libvorbisenc.so.2.0.11
+7f393a056000-7f393a057000 rw-p 000b2000 08:01 1990252                    /usr/lib/libvorbisenc.so.2.0.11
+7f393a057000-7f393a0c9000 r-xp 00000000 08:01 1990248                    /usr/lib/libFLAC.so.8.3.0
+7f393a0c9000-7f393a2c8000 ---p 00072000 08:01 1990248                    /usr/lib/libFLAC.so.8.3.0
+7f393a2c8000-7f393a2c9000 r--p 00071000 08:01 1990248                    /usr/lib/libFLAC.so.8.3.0
+7f393a2c9000-7f393a2ca000 rw-p 00072000 08:01 1990248                    /usr/lib/libFLAC.so.8.3.0
+7f393a2ca000-7f393a318000 r-xp 00000000 08:01 1976516                    /usr/lib/libdbus-1.so.3.14.3
+7f393a318000-7f393a518000 ---p 0004e000 08:01 1976516                    /usr/lib/libdbus-1.so.3.14.3
+7f393a518000-7f393a519000 r--p 0004e000 08:01 1976516                    /usr/lib/libdbus-1.so.3.14.3
+7f393a519000-7f393a51a000 rw-p 0004f000 08:01 1976516                    /usr/lib/libdbus-1.so.3.14.3
+7f393a51a000-7f393a51b000 rw-p 00000000 00:00 0 
+7f393a51b000-7f393a68d000 r-xp 00000000 08:01 1969643                    /usr/lib/libstdc++.so.6.0.21
+7f393a68d000-7f393a88d000 ---p 00172000 08:01 1969643                    /usr/lib/libstdc++.so.6.0.21
+7f393a88d000-7f393a897000 r--p 00172000 08:01 1969643                    /usr/lib/libstdc++.so.6.0.21
+7f393a897000-7f393a899000 rw-p 0017c000 08:01 1969643                    /usr/lib/libstdc++.so.6.0.21
+7f393a899000-7f393a89d000 rw-p 00000000 00:00 0 
+7f393a89d000-7f393aa9a000 r-xp 00000000 08:01 1995381                    /usr/lib/libfftw3f.so.3.4.4
+7f393aa9a000-7f393ac99000 ---p 001fd000 08:01 1995381                    /usr/lib/libfftw3f.so.3.4.4
+7f393ac99000-7f393acaa000 r--p 001fc000 08:01 1995381                    /usr/lib/libfftw3f.so.3.4.4
+7f393acaa000-7f393acab000 rw-p 0020d000 08:01 1995381                    /usr/lib/libfftw3f.so.3.4.4
+7f393acab000-7f393acc1000 r-xp 00000000 08:01 1995472                    /usr/lib/libjack.so.0.0.28
+7f393acc1000-7f393aec0000 ---p 00016000 08:01 1995472                    /usr/lib/libjack.so.0.0.28
+7f393aec0000-7f393aec1000 r--p 00015000 08:01 1995472                    /usr/lib/libjack.so.0.0.28
+7f393aec1000-7f393aec2000 rw-p 00016000 08:01 1995472                    /usr/lib/libjack.so.0.0.28
+7f393aec2000-7f393aecb000 rw-p 00000000 00:00 0 
+7f393aecb000-7f393af2c000 r-xp 00000000 08:01 1990287                    /usr/lib/libsndfile.so.1.0.25
+7f393af2c000-7f393b12c000 ---p 00061000 08:01 1990287                    /usr/lib/libsndfile.so.1.0.25
+7f393b12c000-7f393b12e000 r--p 00061000 08:01 1990287                    /usr/lib/libsndfile.so.1.0.25
+7f393b12e000-7f393b12f000 rw-p 00063000 08:01 1990287                    /usr/lib/libsndfile.so.1.0.25
+7f393b12f000-7f393b133000 rw-p 00000000 00:00 0 
+7f393b133000-7f393b143000 r-xp 00000000 08:01 1992083                    /usr/lib/libavahi-client.so.3.2.9
+7f393b143000-7f393b342000 ---p 00010000 08:01 1992083                    /usr/lib/libavahi-client.so.3.2.9
+7f393b342000-7f393b343000 r--p 0000f000 08:01 1992083                    /usr/lib/libavahi-client.so.3.2.9
+7f393b343000-7f393b344000 rw-p 00010000 08:01 1992083                    /usr/lib/libavahi-client.so.3.2.9
+7f393b344000-7f393b350000 r-xp 00000000 08:01 1992080                    /usr/lib/libavahi-common.so.3.5.3
+7f393b350000-7f393b54f000 ---p 0000c000 08:01 1992080                    /usr/lib/libavahi-common.so.3.5.3
+7f393b54f000-7f393b550000 r--p 0000b000 08:01 1992080                    /usr/lib/libavahi-common.so.3.5.3
+7f393b550000-7f393b551000 rw-p 0000c000 08:01 1992080                    /usr/lib/libavahi-common.so.3.5.3
+7f393b551000-7f393b5b3000 r-xp 00000000 08:03 1573298                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/libscsynth.so
+7f393b5b3000-7f393b7b3000 ---p 00062000 08:03 1573298                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/libscsynth.so
+7f393b7b3000-7f393b7b5000 r--p 00062000 08:03 1573298                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/libscsynth.so
+7f393b7b5000-7f393b7b7000 rw-p 00064000 08:03 1573298                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/libscsynth.so
+7f393b7b7000-7f393b9d7000 rw-p 00000000 00:00 0 
+7f393b9d7000-7f393b9ee000 r-xp 00000000 00:20 412853                     /tmp/jna/jna4554295871334156689.tmp (deleted)
+7f393b9ee000-7f393bbed000 ---p 00017000 00:20 412853                     /tmp/jna/jna4554295871334156689.tmp (deleted)
+7f393bbed000-7f393bbee000 r--p 00016000 00:20 412853                     /tmp/jna/jna4554295871334156689.tmp (deleted)
+7f393bbee000-7f393bbef000 rw-p 00017000 00:20 412853                     /tmp/jna/jna4554295871334156689.tmp (deleted)
+7f393bbef000-7f393bdef000 rw-p 00000000 00:00 0 
+7f393bdef000-7f393be00000 r-xp 00000000 08:01 2107781                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libnio.so
+7f393be00000-7f393bfff000 ---p 00011000 08:01 2107781                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libnio.so
+7f393bfff000-7f393c000000 rw-p 00010000 08:01 2107781                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libnio.so
+7f393c000000-7f393c021000 rw-p 00000000 00:00 0 
+7f393c021000-7f3940000000 ---p 00000000 00:00 0 
+7f3940000000-7f3940021000 rw-p 00000000 00:00 0 
+7f3940021000-7f3944000000 ---p 00000000 00:00 0 
+7f3944000000-7f39440f6000 rw-p 00000000 00:00 0 
+7f39440f6000-7f3948000000 ---p 00000000 00:00 0 
+7f3948000000-7f3948021000 rw-p 00000000 00:00 0 
+7f3948021000-7f394c000000 ---p 00000000 00:00 0 
+7f394c000000-7f394c021000 rw-p 00000000 00:00 0 
+7f394c021000-7f3950000000 ---p 00000000 00:00 0 
+7f3950000000-7f3950ac7000 rw-p 00000000 00:00 0 
+7f3950ac7000-7f3954000000 ---p 00000000 00:00 0 
+7f3954000000-7f395403c000 rw-p 00000000 00:00 0 
+7f395403c000-7f3958000000 ---p 00000000 00:00 0 
+7f3958000000-7f3958021000 rw-p 00000000 00:00 0 
+7f3958021000-7f395c000000 ---p 00000000 00:00 0 
+7f395c000000-7f395c021000 rw-p 00000000 00:00 0 
+7f395c021000-7f3960000000 ---p 00000000 00:00 0 
+7f3960000000-7f396002c000 rw-p 00000000 00:00 0 
+7f396002c000-7f3964000000 ---p 00000000 00:00 0 
+7f3964000000-7f3964059000 rw-p 00000000 00:00 0 
+7f3964059000-7f3968000000 ---p 00000000 00:00 0 
+7f3968000000-7f3968079000 rw-p 00000000 00:00 0 
+7f3968079000-7f396c000000 ---p 00000000 00:00 0 
+7f396c000000-7f396c021000 rw-p 00000000 00:00 0 
+7f396c021000-7f3970000000 ---p 00000000 00:00 0 
+7f3970000000-7f3970021000 rw-p 00000000 00:00 0 
+7f3970021000-7f3974000000 ---p 00000000 00:00 0 
+7f3974000000-7f3974021000 rw-p 00000000 00:00 0 
+7f3974021000-7f3978000000 ---p 00000000 00:00 0 
+7f3978000000-7f39783ed000 rw-p 00000000 00:00 0 
+7f39783ed000-7f397c000000 ---p 00000000 00:00 0 
+7f397c000000-7f397c021000 rw-p 00000000 00:00 0 
+7f397c021000-7f3980000000 ---p 00000000 00:00 0 
+7f3980000000-7f3980046000 rw-p 00000000 00:00 0 
+7f3980046000-7f3984000000 ---p 00000000 00:00 0 
+7f3984000000-7f3984021000 rw-p 00000000 00:00 0 
+7f3984021000-7f3988000000 ---p 00000000 00:00 0 
+7f3988000000-7f3988021000 rw-p 00000000 00:00 0 
+7f3988021000-7f398c000000 ---p 00000000 00:00 0 
+7f398c000000-7f398c083000 rw-p 00000000 00:00 0 
+7f398c083000-7f3990000000 ---p 00000000 00:00 0 
+7f399001d000-7f399021d000 rw-p 00000000 00:00 0 
+7f399021d000-7f3990220000 ---p 00000000 00:00 0 
+7f3990220000-7f399031e000 rw-p 00000000 00:00 0                          [stack:23414]
+7f399031e000-7f3990323000 r-xp 00000000 08:01 1990021                    /usr/lib/libXfixes.so.3.1.0
+7f3990323000-7f3990522000 ---p 00005000 08:01 1990021                    /usr/lib/libXfixes.so.3.1.0
+7f3990522000-7f3990523000 r--p 00004000 08:01 1990021                    /usr/lib/libXfixes.so.3.1.0
+7f3990523000-7f3990524000 rw-p 00005000 08:01 1990021                    /usr/lib/libXfixes.so.3.1.0
+7f3990524000-7f399052e000 r-xp 00000000 08:01 1990058                    /usr/lib/libXcursor.so.1.0.2
+7f399052e000-7f399072d000 ---p 0000a000 08:01 1990058                    /usr/lib/libXcursor.so.1.0.2
+7f399072d000-7f399072e000 r--p 00009000 08:01 1990058                    /usr/lib/libXcursor.so.1.0.2
+7f399072e000-7f399072f000 rw-p 0000a000 08:01 1990058                    /usr/lib/libXcursor.so.1.0.2
+7f399072f000-7f399079e000 r-xp 00000000 08:01 1977477                    /usr/lib/libpcre.so.1.2.5
+7f399079e000-7f399099d000 ---p 0006f000 08:01 1977477                    /usr/lib/libpcre.so.1.2.5
+7f399099d000-7f399099e000 r--p 0006e000 08:01 1977477                    /usr/lib/libpcre.so.1.2.5
+7f399099e000-7f399099f000 rw-p 0006f000 08:01 1977477                    /usr/lib/libpcre.so.1.2.5
+7f399099f000-7f39909c8000 r-xp 00000000 08:01 1990932                    /usr/lib/libgraphite2.so.3.0.1
+7f39909c8000-7f3990bc7000 ---p 00029000 08:01 1990932                    /usr/lib/libgraphite2.so.3.0.1
+7f3990bc7000-7f3990bc9000 r--p 00028000 08:01 1990932                    /usr/lib/libgraphite2.so.3.0.1
+7f3990bc9000-7f3990bca000 rw-p 0002a000 08:01 1990932                    /usr/lib/libgraphite2.so.3.0.1
+7f3990bca000-7f3990cd6000 r-xp 00000000 08:01 1979246                    /usr/lib/libglib-2.0.so.0.4600.1
+7f3990cd6000-7f3990ed5000 ---p 0010c000 08:01 1979246                    /usr/lib/libglib-2.0.so.0.4600.1
+7f3990ed5000-7f3990ed6000 r--p 0010b000 08:01 1979246                    /usr/lib/libglib-2.0.so.0.4600.1
+7f3990ed6000-7f3990ed7000 rw-p 0010c000 08:01 1979246                    /usr/lib/libglib-2.0.so.0.4600.1
+7f3990ed7000-7f3990ed8000 rw-p 00000000 00:00 0 
+7f3990ed8000-7f3990f38000 r-xp 00000000 08:01 1990946                    /usr/lib/libharfbuzz.so.0.10000.6
+7f3990f38000-7f3991138000 ---p 00060000 08:01 1990946                    /usr/lib/libharfbuzz.so.0.10000.6
+7f3991138000-7f3991139000 r--p 00060000 08:01 1990946                    /usr/lib/libharfbuzz.so.0.10000.6
+7f3991139000-7f399113a000 rw-p 00061000 08:01 1990946                    /usr/lib/libharfbuzz.so.0.10000.6
+7f399113a000-7f399116e000 r-xp 00000000 08:01 1990911                    /usr/lib/libpng16.so.16.18.0
+7f399116e000-7f399136d000 ---p 00034000 08:01 1990911                    /usr/lib/libpng16.so.16.18.0
+7f399136d000-7f399136e000 r--p 00033000 08:01 1990911                    /usr/lib/libpng16.so.16.18.0
+7f399136e000-7f399136f000 rw-p 00034000 08:01 1990911                    /usr/lib/libpng16.so.16.18.0
+7f399136f000-7f399137e000 r-xp 00000000 08:01 1972426                    /usr/lib/libbz2.so.1.0.6
+7f399137e000-7f399157d000 ---p 0000f000 08:01 1972426                    /usr/lib/libbz2.so.1.0.6
+7f399157d000-7f399157f000 rw-p 0000e000 08:01 1972426                    /usr/lib/libbz2.so.1.0.6
+7f399157f000-7f3991595000 r-xp 00000000 08:01 1969629                    /usr/lib/libgcc_s.so.1
+7f3991595000-7f3991794000 ---p 00016000 08:01 1969629                    /usr/lib/libgcc_s.so.1
+7f3991794000-7f3991795000 rw-p 00015000 08:01 1969629                    /usr/lib/libgcc_s.so.1
+7f3991795000-7f399184c000 r-xp 00000000 08:01 1990955                    /usr/lib/libfreetype.so.6.12.1
+7f399184c000-7f3991a4b000 ---p 000b7000 08:01 1990955                    /usr/lib/libfreetype.so.6.12.1
+7f3991a4b000-7f3991a51000 r--p 000b6000 08:01 1990955                    /usr/lib/libfreetype.so.6.12.1
+7f3991a51000-7f3991a52000 rw-p 000bc000 08:01 1990955                    /usr/lib/libfreetype.so.6.12.1
+7f3991a52000-7f3991ab4000 r-xp 00000000 08:01 2107786                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libfontmanager.so
+7f3991ab4000-7f3991cb4000 ---p 00062000 08:01 2107786                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libfontmanager.so
+7f3991cb4000-7f3991cb8000 rw-p 00062000 08:01 2107786                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libfontmanager.so
+7f3991cb8000-7f3991eb8000 rw-p 00000000 00:00 0 
+7f3991eb8000-7f3991ebd000 r-xp 00000000 08:01 1986295                    /usr/lib/libXdmcp.so.6.0.0
+7f3991ebd000-7f39920bc000 ---p 00005000 08:01 1986295                    /usr/lib/libXdmcp.so.6.0.0
+7f39920bc000-7f39920bd000 r--p 00004000 08:01 1986295                    /usr/lib/libXdmcp.so.6.0.0
+7f39920bd000-7f39920be000 rw-p 00005000 08:01 1986295                    /usr/lib/libXdmcp.so.6.0.0
+7f39920be000-7f39920c0000 r-xp 00000000 08:01 1986299                    /usr/lib/libXau.so.6.0.0
+7f39920c0000-7f39922c0000 ---p 00002000 08:01 1986299                    /usr/lib/libXau.so.6.0.0
+7f39922c0000-7f39922c1000 r--p 00002000 08:01 1986299                    /usr/lib/libXau.so.6.0.0
+7f39922c1000-7f39922c2000 rw-p 00003000 08:01 1986299                    /usr/lib/libXau.so.6.0.0
+7f39922c2000-7f39922e3000 r-xp 00000000 08:01 1988589                    /usr/lib/libxcb.so.1.1.0
+7f39922e3000-7f39924e3000 ---p 00021000 08:01 1988589                    /usr/lib/libxcb.so.1.1.0
+7f39924e3000-7f39924e4000 r--p 00021000 08:01 1988589                    /usr/lib/libxcb.so.1.1.0
+7f39924e4000-7f39924e5000 rw-p 00022000 08:01 1988589                    /usr/lib/libxcb.so.1.1.0
+7f39924e5000-7f39924f4000 r-xp 00000000 08:01 1989962                    /usr/lib/libXi.so.6.1.0
+7f39924f4000-7f39926f3000 ---p 0000f000 08:01 1989962                    /usr/lib/libXi.so.6.1.0
+7f39926f3000-7f39926f4000 r--p 0000e000 08:01 1989962                    /usr/lib/libXi.so.6.1.0
+7f39926f4000-7f39926f5000 rw-p 0000f000 08:01 1989962                    /usr/lib/libXi.so.6.1.0
+7f39926f5000-7f39926fa000 r-xp 00000000 08:01 1990109                    /usr/lib/libXtst.so.6.1.0
+7f39926fa000-7f39928f9000 ---p 00005000 08:01 1990109                    /usr/lib/libXtst.so.6.1.0
+7f39928f9000-7f39928fa000 r--p 00004000 08:01 1990109                    /usr/lib/libXtst.so.6.1.0
+7f39928fa000-7f39928fb000 rw-p 00005000 08:01 1990109                    /usr/lib/libXtst.so.6.1.0
+7f39928fb000-7f3992904000 r-xp 00000000 08:01 1989966                    /usr/lib/libXrender.so.1.3.0
+7f3992904000-7f3992b03000 ---p 00009000 08:01 1989966                    /usr/lib/libXrender.so.1.3.0
+7f3992b03000-7f3992b04000 r--p 00008000 08:01 1989966                    /usr/lib/libXrender.so.1.3.0
+7f3992b04000-7f3992b05000 rw-p 00009000 08:01 1989966                    /usr/lib/libXrender.so.1.3.0
+7f3992b05000-7f3992c40000 r-xp 00000000 08:01 1988670                    /usr/lib/libX11.so.6.3.0
+7f3992c40000-7f3992e3f000 ---p 0013b000 08:01 1988670                    /usr/lib/libX11.so.6.3.0
+7f3992e3f000-7f3992e41000 r--p 0013a000 08:01 1988670                    /usr/lib/libX11.so.6.3.0
+7f3992e41000-7f3992e46000 rw-p 0013c000 08:01 1988670                    /usr/lib/libX11.so.6.3.0
+7f3992e46000-7f3992e47000 rw-p 00000000 00:00 0 
+7f3992e47000-7f3992e58000 r-xp 00000000 08:01 1989567                    /usr/lib/libXext.so.6.4.0
+7f3992e58000-7f3993057000 ---p 00011000 08:01 1989567                    /usr/lib/libXext.so.6.4.0
+7f3993057000-7f3993058000 r--p 00010000 08:01 1989567                    /usr/lib/libXext.so.6.4.0
+7f3993058000-7f3993059000 rw-p 00011000 08:01 1989567                    /usr/lib/libXext.so.6.4.0
+7f3993059000-7f39930ac000 r-xp 00000000 08:01 2107783                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libawt_xawt.so
+7f39930ac000-7f39932ac000 ---p 00053000 08:01 2107783                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libawt_xawt.so
+7f39932ac000-7f39932af000 rw-p 00053000 08:01 2107783                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libawt_xawt.so
+7f39932af000-7f3998000000 rw-p 00000000 00:00 0 
+7f3998000000-7f3998021000 rw-p 00000000 00:00 0 
+7f3998021000-7f399c000000 ---p 00000000 00:00 0 
+7f399c068000-7f399c06b000 ---p 00000000 00:00 0 
+7f399c06b000-7f399c169000 rw-p 00000000 00:00 0                          [stack:23413]
+7f399c169000-7f399c207000 r-xp 00000000 08:01 2107780                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libawt.so
+7f399c207000-7f399c407000 ---p 0009e000 08:01 2107780                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libawt.so
+7f399c407000-7f399c413000 rw-p 0009e000 08:01 2107780                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libawt.so
+7f399c413000-7f399c437000 rw-p 00000000 00:00 0 
+7f399c437000-7f399c444000 r-xp 00000000 08:03 1573401                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/librxtxSerial.so
+7f399c444000-7f399c643000 ---p 0000d000 08:03 1573401                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/librxtxSerial.so
+7f399c643000-7f399c644000 rw-p 0000c000 08:03 1573401                    /home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64/librxtxSerial.so
+7f399c644000-7f399c844000 rw-p 00000000 00:00 0 
+7f399c844000-7f399c847000 ---p 00000000 00:00 0 
+7f399c847000-7f399c945000 rw-p 00000000 00:00 0                          [stack:23412]
+7f399c945000-7f399c948000 ---p 00000000 00:00 0 
+7f399c948000-7f399ca46000 rw-p 00000000 00:00 0                          [stack:23411]
+7f399ca46000-7f399ca49000 ---p 00000000 00:00 0 
+7f399ca49000-7f399cb47000 rw-p 00000000 00:00 0                          [stack:23410]
+7f399cb47000-7f399cb4a000 ---p 00000000 00:00 0 
+7f399cb4a000-7f399cc48000 rw-p 00000000 00:00 0                          [stack:23409]
+7f399cc48000-7f399cc4b000 ---p 00000000 00:00 0 
+7f399cc4b000-7f399cd49000 rw-p 00000000 00:00 0                          [stack:23408]
+7f399cd49000-7f399cd4c000 ---p 00000000 00:00 0 
+7f399cd4c000-7f399ce4a000 rw-p 00000000 00:00 0                          [stack:23407]
+7f399ce4a000-7f399ce4d000 ---p 00000000 00:00 0 
+7f399ce4d000-7f399cf4b000 rw-p 00000000 00:00 0                          [stack:23406]
+7f399cf4b000-7f399cf4e000 ---p 00000000 00:00 0 
+7f399cf4e000-7f399d04c000 rw-p 00000000 00:00 0                          [stack:23405]
+7f399d067000-7f399d267000 rw-p 00000000 00:00 0 
+7f399d267000-7f399d2df000 r--s 010e9000 08:01 2107884                    /usr/lib/jvm/java-8-openjdk/lib/tools.jar
+7f399d2df000-7f399d4df000 rw-p 00000000 00:00 0 
+7f399d4df000-7f399d6df000 rw-p 00000000 00:00 0 
+7f399d6df000-7f399d8df000 rw-p 00000000 00:00 0 
+7f399d8df000-7f399dadf000 rw-p 00000000 00:00 0 
+7f399dadf000-7f399dcdf000 rw-p 00000000 00:00 0 
+7f399dcdf000-7f399dd02000 r--p 00000000 08:01 1968195                    /usr/share/locale/sv/LC_MESSAGES/libc.mo
+7f399dd02000-7f399dd05000 ---p 00000000 00:00 0 
+7f399dd05000-7f399de03000 rw-p 00000000 00:00 0                          [stack:23399]
+7f399de03000-7f399de06000 ---p 00000000 00:00 0 
+7f399de06000-7f399e104000 rw-p 00000000 00:00 0                          [stack:23398]
+7f399e104000-7f399e11a000 r-xp 00000000 08:01 2107771                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libnet.so
+7f399e11a000-7f399e31a000 ---p 00016000 08:01 2107771                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libnet.so
+7f399e31a000-7f399e31b000 rw-p 00016000 08:01 2107771                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libnet.so
+7f399e31b000-7f399e51b000 rw-p 00000000 00:00 0 
+7f399e51b000-7f399e71b000 rw-p 00000000 00:00 0 
+7f399e71b000-7f399e71c000 ---p 00000000 00:00 0 
+7f399e71c000-7f399e81c000 rw-p 00000000 00:00 0                          [stack:23397]
+7f399e81c000-7f399e81f000 ---p 00000000 00:00 0 
+7f399e81f000-7f399e91d000 rw-p 00000000 00:00 0                          [stack:23396]
+7f399e91d000-7f399e920000 ---p 00000000 00:00 0 
+7f399e920000-7f399ea1e000 rw-p 00000000 00:00 0                          [stack:23395]
+7f399ea1e000-7f399ea21000 ---p 00000000 00:00 0 
+7f399ea21000-7f399eb1f000 rw-p 00000000 00:00 0                          [stack:23394]
+7f399eb1f000-7f399eb22000 ---p 00000000 00:00 0 
+7f399eb22000-7f399ec20000 rw-p 00000000 00:00 0                          [stack:23393]
+7f399ec20000-7f399ec23000 ---p 00000000 00:00 0 
+7f399ec23000-7f399ed21000 rw-p 00000000 00:00 0                          [stack:23392]
+7f399ed21000-7f399eeef000 r--p 00000000 08:01 1986142                    /usr/lib/locale/locale-archive
+7f399eeef000-7f399eef2000 ---p 00000000 00:00 0 
+7f399eef2000-7f399eff0000 rw-p 00000000 00:00 0                          [stack:23391]
+7f399eff0000-7f399eff3000 ---p 00000000 00:00 0 
+7f399eff3000-7f399f0f1000 rw-p 00000000 00:00 0                          [stack:23390]
+7f399f0f1000-7f399f0f2000 ---p 00000000 00:00 0 
+7f399f0f2000-7f39a0000000 rw-p 00000000 00:00 0                          [stack:23389]
+7f39a0000000-7f39a0021000 rw-p 00000000 00:00 0 
+7f39a0021000-7f39a4000000 ---p 00000000 00:00 0 
+7f39a4000000-7f39a4021000 rw-p 00000000 00:00 0 
+7f39a4021000-7f39a8000000 ---p 00000000 00:00 0 
+7f39a8000000-7f39a8021000 rw-p 00000000 00:00 0 
+7f39a8021000-7f39ac000000 ---p 00000000 00:00 0 
+7f39ac001000-7f39ac002000 rwxp 00000000 00:00 0 
+7f39ac002000-7f39ac006000 r--s 00095000 08:01 2107704                    /usr/lib/jvm/java-8-openjdk/jre/lib/jsse.jar
+7f39ac00a000-7f39ac01d000 r--s 00345000 08:01 2107705                    /usr/lib/jvm/java-8-openjdk/jre/lib/resources.jar
+7f39ac01d000-7f39ac05c000 r--s 00340000 08:03 1443766                    /home/bob/.m2/repository/org/clojure/clojure/1.6.0/clojure-1.6.0.jar
+7f39ac05c000-7f39ac15d000 rw-p 00000000 00:00 0 
+7f39ac15d000-7f39ac32b000 r--s 03bde000 08:01 2107708                    /usr/lib/jvm/java-8-openjdk/jre/lib/rt.jar
+7f39ac32b000-7f39ad000000 rw-p 00000000 00:00 0 
+7f39ad000000-7f39ad7f0000 rwxp 00000000 00:00 0 
+7f39ad7f0000-7f39bc000000 ---p 00000000 00:00 0 
+7f39bc000000-7f39bd026000 rw-p 00000000 00:00 0 
+7f39bd026000-7f39c0000000 ---p 00000000 00:00 0 
+7f39c000a000-7f39c000b000 rw-p 00000000 00:00 0 
+7f39c000b000-7f39c0015000 r--s 00116000 08:01 2107728                    /usr/lib/jvm/java-8-openjdk/jre/lib/ext/localedata.jar
+7f39c0015000-7f39c0031000 r--s 00393000 08:01 2107726                    /usr/lib/jvm/java-8-openjdk/jre/lib/ext/cldrdata.jar
+7f39c0031000-7f39c0032000 r--s 00005000 08:03 1443769                    /home/bob/.m2/repository/clj-native/clj-native/0.9.3/clj-native-0.9.3.jar
+7f39c0032000-7f39c0033000 r--s 00001000 08:03 1443764                    /home/bob/.m2/repository/org/clojure/data.json/0.2.3/data.json-0.2.3.jar
+7f39c0033000-7f39c0039000 r--s 00068000 08:03 1443768                    /home/bob/.m2/repository/overtone/overtone/0.9.1/overtone-0.9.1.jar
+7f39c0039000-7f39c003f000 r--s 0002c000 08:03 121907                     /home/bob/.m2/repository/cider/cider-nrepl/0.10.0-SNAPSHOT/cider-nrepl-0.10.0-SNAPSHOT.jar
+7f39c003f000-7f39c0043000 r--s 0002f000 08:03 1573093                    /home/bob/.m2/repository/javax/jmdns/jmdns/3.4.1/jmdns-3.4.1.jar
+7f39c0043000-7f39c0048000 r--s 0003d000 08:03 1573094                    /home/bob/.m2/repository/commons-net/commons-net/3.0.1/commons-net-3.0.1.jar
+7f39c0048000-7f39c018f000 rw-p 00000000 00:00 0 
+7f39c018f000-7f39c0190000 ---p 00000000 00:00 0 
+7f39c0190000-7f39c0290000 rw-p 00000000 00:00 0                          [stack:23384]
+7f39c0290000-7f39c0291000 ---p 00000000 00:00 0 
+7f39c0291000-7f39c0391000 rw-p 00000000 00:00 0                          [stack:23383]
+7f39c0391000-7f39c0392000 ---p 00000000 00:00 0 
+7f39c0392000-7f39c0492000 rw-p 00000000 00:00 0                          [stack:23382]
+7f39c0492000-7f39c0493000 ---p 00000000 00:00 0 
+7f39c0493000-7f39c05e2000 rw-p 00000000 00:00 0                          [stack:23381]
+7f39c05e2000-7f39c08cc000 ---p 00000000 00:00 0 
+7f39c08cc000-7f39c091b000 rw-p 00000000 00:00 0 
+7f39c091b000-7f39c0c04000 ---p 00000000 00:00 0 
+7f39c0c04000-7f39c0da1000 rw-p 00000000 00:00 0 
+7f39c0da1000-7f39c0dc2000 rw-p 00000000 00:00 0 
+7f39c0dc2000-7f39c1162000 ---p 00000000 00:00 0 
+7f39c1162000-7f39c116a000 r-xp 00000000 08:01 2107768                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libzip.so
+7f39c116a000-7f39c1369000 ---p 00008000 08:01 2107768                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libzip.so
+7f39c1369000-7f39c136a000 rw-p 00007000 08:01 2107768                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libzip.so
+7f39c136a000-7f39c1375000 r-xp 00000000 08:01 1969327                    /usr/lib/libnss_files-2.22.so
+7f39c1375000-7f39c1574000 ---p 0000b000 08:01 1969327                    /usr/lib/libnss_files-2.22.so
+7f39c1574000-7f39c1575000 r--p 0000a000 08:01 1969327                    /usr/lib/libnss_files-2.22.so
+7f39c1575000-7f39c1576000 rw-p 0000b000 08:01 1969327                    /usr/lib/libnss_files-2.22.so
+7f39c1576000-7f39c157c000 rw-p 00000000 00:00 0 
+7f39c157c000-7f39c15a8000 r-xp 00000000 08:01 2107767                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libjava.so
+7f39c15a8000-7f39c17a8000 ---p 0002c000 08:01 2107767                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libjava.so
+7f39c17a8000-7f39c17aa000 rw-p 0002c000 08:01 2107767                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libjava.so
+7f39c17aa000-7f39c17b7000 r-xp 00000000 08:01 2107760                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libverify.so
+7f39c17b7000-7f39c19b6000 ---p 0000d000 08:01 2107760                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libverify.so
+7f39c19b6000-7f39c19b8000 rw-p 0000c000 08:01 2107760                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libverify.so
+7f39c19b8000-7f39c19bf000 r-xp 00000000 08:01 1969335                    /usr/lib/librt-2.22.so
+7f39c19bf000-7f39c1bbe000 ---p 00007000 08:01 1969335                    /usr/lib/librt-2.22.so
+7f39c1bbe000-7f39c1bbf000 r--p 00006000 08:01 1969335                    /usr/lib/librt-2.22.so
+7f39c1bbf000-7f39c1bc0000 rw-p 00007000 08:01 1969335                    /usr/lib/librt-2.22.so
+7f39c1bc0000-7f39c1cbd000 r-xp 00000000 08:01 1969332                    /usr/lib/libm-2.22.so
+7f39c1cbd000-7f39c1ebc000 ---p 000fd000 08:01 1969332                    /usr/lib/libm-2.22.so
+7f39c1ebc000-7f39c1ebd000 r--p 000fc000 08:01 1969332                    /usr/lib/libm-2.22.so
+7f39c1ebd000-7f39c1ebe000 rw-p 000fd000 08:01 1969332                    /usr/lib/libm-2.22.so
+7f39c1ebe000-7f39c2b11000 r-xp 00000000 08:01 2107791                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/server/libjvm.so
+7f39c2b11000-7f39c2d10000 ---p 00c53000 08:01 2107791                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/server/libjvm.so
+7f39c2d10000-7f39c2dcc000 rw-p 00c52000 08:01 2107791                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/server/libjvm.so
+7f39c2dcc000-7f39c2dfa000 rw-p 00000000 00:00 0 
+7f39c2dfa000-7f39c2f95000 r-xp 00000000 08:01 1969282                    /usr/lib/libc-2.22.so
+7f39c2f95000-7f39c3194000 ---p 0019b000 08:01 1969282                    /usr/lib/libc-2.22.so
+7f39c3194000-7f39c3198000 r--p 0019a000 08:01 1969282                    /usr/lib/libc-2.22.so
+7f39c3198000-7f39c319a000 rw-p 0019e000 08:01 1969282                    /usr/lib/libc-2.22.so
+7f39c319a000-7f39c319e000 rw-p 00000000 00:00 0 
+7f39c319e000-7f39c31a1000 r-xp 00000000 08:01 1969331                    /usr/lib/libdl-2.22.so
+7f39c31a1000-7f39c33a0000 ---p 00003000 08:01 1969331                    /usr/lib/libdl-2.22.so
+7f39c33a0000-7f39c33a1000 r--p 00002000 08:01 1969331                    /usr/lib/libdl-2.22.so
+7f39c33a1000-7f39c33a2000 rw-p 00003000 08:01 1969331                    /usr/lib/libdl-2.22.so
+7f39c33a2000-7f39c33af000 r-xp 00000000 08:01 2107788                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/jli/libjli.so
+7f39c33af000-7f39c35ae000 ---p 0000d000 08:01 2107788                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/jli/libjli.so
+7f39c35ae000-7f39c35af000 rw-p 0000c000 08:01 2107788                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/jli/libjli.so
+7f39c35af000-7f39c35c4000 r-xp 00000000 08:01 1972587                    /usr/lib/libz.so.1.2.8
+7f39c35c4000-7f39c37c3000 ---p 00015000 08:01 1972587                    /usr/lib/libz.so.1.2.8
+7f39c37c3000-7f39c37c4000 r--p 00014000 08:01 1972587                    /usr/lib/libz.so.1.2.8
+7f39c37c4000-7f39c37c5000 rw-p 00015000 08:01 1972587                    /usr/lib/libz.so.1.2.8
+7f39c37c5000-7f39c37dd000 r-xp 00000000 08:01 1969263                    /usr/lib/libpthread-2.22.so
+7f39c37dd000-7f39c39dc000 ---p 00018000 08:01 1969263                    /usr/lib/libpthread-2.22.so
+7f39c39dc000-7f39c39dd000 r--p 00017000 08:01 1969263                    /usr/lib/libpthread-2.22.so
+7f39c39dd000-7f39c39de000 rw-p 00018000 08:01 1969263                    /usr/lib/libpthread-2.22.so
+7f39c39de000-7f39c39e2000 rw-p 00000000 00:00 0 
+7f39c39e2000-7f39c3a04000 r-xp 00000000 08:01 1969281                    /usr/lib/ld-2.22.so
+7f39c3a04000-7f39c3a05000 r--s 00009000 08:03 1573097                    /home/bob/.m2/repository/org/clojure/tools.nrepl/0.2.10/tools.nrepl-0.2.10.jar
+7f39c3a05000-7f39c3a06000 r--s 00001000 08:03 1573105                    /home/bob/.m2/repository/overtone/midi-clj/0.5.0/midi-clj-0.5.0.jar
+7f39c3a06000-7f39c3a0a000 r--s 00b46000 08:03 1573110                    /home/bob/.m2/repository/overtone/scsynth/3.5.7.0/scsynth-3.5.7.0.jar
+7f39c3a0a000-7f39c3adf000 rw-p 00000000 00:00 0 
+7f39c3adf000-7f39c3ae2000 ---p 00000000 00:00 0 
+7f39c3ae2000-7f39c3be4000 rw-p 00000000 00:00 0                          [stack:23379]
+7f39c3be4000-7f39c3be5000 r--s 00000000 08:03 1573111                    /home/bob/.m2/repository/clj-glob/clj-glob/1.0.0/clj-glob-1.0.0.jar
+7f39c3be5000-7f39c3be7000 r--s 0006a000 08:03 1573113                    /home/bob/.m2/repository/rxtx22/rxtx22/1.0.6/rxtx22-1.0.6.jar
+7f39c3be7000-7f39c3be8000 r--s 00001000 08:03 1573106                    /home/bob/.m2/repository/overtone/libs.handlers/0.2.0/libs.handlers-0.2.0.jar
+7f39c3be8000-7f39c3be9000 r--s 00004000 08:03 1573101                    /home/bob/.m2/repository/overtone/osc-clj/0.9.0/osc-clj-0.9.0.jar
+7f39c3be9000-7f39c3beb000 r--s 00000000 08:03 1573100                    /home/bob/.m2/repository/overtone/byte-spec/0.3.1/byte-spec-0.3.1.jar
+7f39c3beb000-7f39c3bec000 r--s 00001000 08:03 1573099                    /home/bob/.m2/repository/overtone/at-at/1.2.0/at-at-1.2.0.jar
+7f39c3bec000-7f39c3bf0000 r--s 000f3000 08:03 1573091                    /home/bob/.m2/repository/net/java/dev/jna/jna/3.4.0/jna-3.4.0.jar
+7f39c3bf0000-7f39c3bf4000 r--s 00b6f000 08:03 1573109                    /home/bob/.m2/repository/overtone/scsynth-extras/3.5.7.0/scsynth-extras-3.5.7.0.jar
+7f39c3bf4000-7f39c3bf6000 r--s 00000000 08:03 1573481                    /home/bob/.m2/repository/org/tcrawley/dynapath/0.2.3/dynapath-0.2.3.jar
+7f39c3bf6000-7f39c3bf7000 r--s 00000000 08:03 1573112                    /home/bob/.m2/repository/serial-port/serial-port/1.1.2/serial-port-1.1.2.jar
+7f39c3bf7000-7f39c3bf8000 r--s 00000000 08:03 1573116                    /home/bob/.m2/repository/clojure-complete/clojure-complete/0.2.3/clojure-complete-0.2.3.jar
+7f39c3bf8000-7f39c3c00000 rw-s 00000000 00:20 413710                     /tmp/hsperfdata_bob/23378
+7f39c3c00000-7f39c3c01000 rw-p 00000000 00:00 0 
+7f39c3c01000-7f39c3c02000 r--p 00000000 00:00 0 
+7f39c3c02000-7f39c3c03000 rw-p 00000000 00:00 0 
+7f39c3c03000-7f39c3c04000 r--p 00021000 08:01 1969281                    /usr/lib/ld-2.22.so
+7f39c3c04000-7f39c3c05000 rw-p 00022000 08:01 1969281                    /usr/lib/ld-2.22.so
+7f39c3c05000-7f39c3c06000 rw-p 00000000 00:00 0 
+7ffe63878000-7ffe63899000 rw-p 00000000 00:00 0                          [stack]
+7ffe638dd000-7ffe638df000 r--p 00000000 00:00 0                          [vvar]
+7ffe638df000-7ffe638e1000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF-8 -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -XX:-OmitStackTraceInFastThrow -Dclojure.compile.path=/home/bob/Respitory/touch-piano/Clojure/touch-piano/target/classes -Dtouch-piano.version=0.1.0-SNAPSHOT -Dclojure.debug=false -Djava.library.path=/home/bob/Respitory/touch-piano/Clojure/touch-piano/target/native/linux/x86_64 
+java_command: clojure.main -i /tmp/form-init6787614245187189011.clj
+java_class_path (initial): /home/bob/Respitory/touch-piano/Clojure/touch-piano/test:/home/bob/Respitory/touch-piano/Clojure/touch-piano/src:/home/bob/Respitory/touch-piano/Clojure/touch-piano/dev-resources:/home/bob/Respitory/touch-piano/Clojure/touch-piano/resources:/home/bob/Respitory/touch-piano/Clojure/touch-piano/target/classes:/home/bob/.m2/repository/clojure-complete/clojure-complete/0.2.3/clojure-complete-0.2.3.jar:/home/bob/.m2/repository/serial-port/serial-port/1.1.2/serial-port-1.1.2.jar:/home/bob/.m2/repository/org/tcrawley/dynapath/0.2.3/dynapath-0.2.3.jar:/home/bob/.m2/repository/overtone/scsynth-extras/3.5.7.0/scsynth-extras-3.5.7.0.jar:/home/bob/.m2/repository/net/java/dev/jna/jna/3.4.0/jna-3.4.0.jar:/home/bob/.m2/repository/overtone/at-at/1.2.0/at-at-1.2.0.jar:/home/bob/.m2/repository/overtone/byte-spec/0.3.1/byte-spec-0.3.1.jar:/home/bob/.m2/repository/overtone/osc-clj/0.9.0/osc-clj-0.9.0.jar:/home/bob/.m2/repository/overtone/libs.handlers/0.2.0/libs.handlers-0.2.0.jar:/home/bob/.m2/repository/overtone/scsynth/3.5.7.0/scsynth-3.5.7.0.jar:/home/bob/.m2/repository/commons-net/commons-net/3.0.1/commons-net-3.0.1.jar:/home/bob/.m2/repository/javax/jmdns/jmdns/3.4.1/jmdns-3.4.1.jar:/home/bob/.m2/repository/rxtx22/rxtx22/1.0.6/rxtx22-1.0.6.jar:/home/bob/.m2/repository/clj-glob/clj-glob/1.0.0/clj-glob-1.0.0.jar:/home/bob/.m2/repository/cider/cider-nrepl/0.10.0-SNAPSHOT/cider-nrepl-0.10.0-SNAPSHOT.jar:/home/bob/.m2/repository/org/clojure/clojure/1.6.0/clojure-1.6.0.jar:/home/bob/.m2/repository/overtone/overtone/0.9.1/overtone-0.9.1.jar:/home/bob/.m2/repository/overtone/midi-clj/0.5.0/midi-clj-0.5.0.jar:/home/bob/.m2/repository/org/clojure/tools.nrepl/0.2.10/tools.nrepl-0.2.10.jar:/home/bob/.m2/repository/org/clojure/data.json/0.2.3/data.json-0.2.3.jar:/home/bob/.m2/repository/clj-native/clj-native/0.9.3/clj-native-0.9.3.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+CLASSPATH=/home/bob/.lein/self-installs/leiningen-2.5.2-standalone.jar
+PATH=/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
+SHELL=/bin/bash
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xa581a0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xa581a0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0x8a4420], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.so+0x8a4420], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.so+0x8a4420], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0x8a4420], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.so+0x8a42d0], sa_mask[0]=00100000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: [libjvm.so+0x8a47a0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGINT: [libjvm.so+0x8a47a0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGTERM: [libjvm.so+0x8a47a0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGQUIT: [libjvm.so+0x8a47a0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+
+
+---------------  S Y S T E M  ---------------
+
+OS:NAME="Arch Linux"
+ID=arch
+PRETTY_NAME="Arch Linux"
+ANSI_COLOR="0;36"
+HOME_URL="https://www.archlinux.org/"
+SUPPORT_URL="https://bbs.archlinux.org/"
+BUG_REPORT_URL="https://bugs.archlinux.org/"
+
+
+uname:Linux 4.2.3-1-ARCH #1 SMP PREEMPT Sat Oct 3 18:52:50 CEST 2015 x86_64
+libc:glibc 2.22 NPTL 2.22 
+rlimit: STACK 8515k, CORE 0k, NPROC 38835, NOFILE 4096, AS infinity
+load average:1,94 1,75 1,77
+
+/proc/meminfo:
+MemTotal:       10128052 kB
+MemFree:         2845924 kB
+MemAvailable:    5388572 kB
+Buffers:          344144 kB
+Cached:          2980856 kB
+SwapCached:            0 kB
+Active:          5106204 kB
+Inactive:        1609552 kB
+Active(anon):    3706568 kB
+Inactive(anon):   759044 kB
+Active(file):    1399636 kB
+Inactive(file):   850508 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:      15728636 kB
+SwapFree:       15728636 kB
+Dirty:               116 kB
+Writeback:             0 kB
+AnonPages:       3390760 kB
+Mapped:           623920 kB
+Shmem:           1074864 kB
+Slab:             419088 kB
+SReclaimable:     339964 kB
+SUnreclaim:        79124 kB
+KernelStack:        9776 kB
+PageTables:        40780 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    20792660 kB
+Committed_AS:    9448464 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:      409764 kB
+VmallocChunk:   34358947836 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:   2023424 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:      208840 kB
+DirectMap2M:    10160128 kB
+
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 58 stepping 9, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, aes, clmul, erms, ht, tsc, tscinvbit, tscinv
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 58
+model name	: Intel(R) Core(TM) i7-3517U CPU @ 1.90GHz
+stepping	: 9
+microcode	: 0x12
+cpu MHz		: 975.375
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm ida arat epb pln pts dtherm tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms xsaveopt
+bugs		:
+bogomips	: 4790.33
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 58
+model name	: Intel(R) Core(TM) i7-3517U CPU @ 1.90GHz
+stepping	: 9
+microcode	: 0x12
+cpu MHz		: 1096.875
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 2
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm ida arat epb pln pts dtherm tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms xsaveopt
+bugs		:
+bogomips	: 4790.33
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 58
+model name	: Intel(R) Core(TM) i7-3517U CPU @ 1.90GHz
+stepping	: 9
+microcode	: 0x12
+cpu MHz		: 816.468
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm ida arat epb pln pts dtherm tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms xsaveopt
+bugs		:
+bogomips	: 4790.33
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 58
+model name	: Intel(R) Core(TM) i7-3517U CPU @ 1.90GHz
+stepping	: 9
+microcode	: 0x12
+cpu MHz		: 1042.875
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 2
+apicid		: 3
+initial apicid	: 3
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm ida arat epb pln pts dtherm tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms xsaveopt
+bugs		:
+bogomips	: 4790.33
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 10128052k(2845924k free), swap 15728636k(15728636k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.60-b23) for linux-amd64 JRE (1.8.0_60-b24), built on Aug 23 2015 18:39:15 by "builduser" with gcc 5.2.0
+
+time: Fri Oct 23 04:10:04 2015
+elapsed time: 32 seconds (0d 0h 0m 32s)
+

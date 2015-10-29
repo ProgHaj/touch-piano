@@ -1,6 +1,7 @@
 (ns touch-piano.core
   (:require [serial-port :as ser]
-            [overtone.core :refer :all]))
+            [overtone.core :refer :all]
+            ))
 
 (boot-external-server)
 ;(require '[touch-piano.settings :as settings])
@@ -11,7 +12,7 @@
   (let [notes ["a" "ab" "b" "bb" "c" "d" "e" "eb" "f" "g" "gb"]
         all-notes (for [number (range 1 7) note notes]
                     (str note number))
-        path "W:/arduino/clojure/touch-piano/resources/piano/med-"
+        path "resources/piano/med-"
         file-ending ".wav"
         all {}]
     (apply merge
