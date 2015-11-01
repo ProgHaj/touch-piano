@@ -21,7 +21,7 @@
 (def number-note ["c" "db" "d" "eb" "e" "f" "gb" "g" "ab" "a" "bb" "b"])
 
 (defn note->number [note]
-  (let [note (name note)]
+  (let [note (str/lower-case (name note))]
     (+ (* (Integer. (str (.charAt note (dec (.length note))))) 12)
        (note-number
         (if (= 3 (.length note))
@@ -34,7 +34,7 @@
 
 
 (defn load-notes [file]
-  (reset! notes (map #(hash-map (keyword (str %2)) %1) (str/split (slurp file) #"\s") (range 7))))
+  (reset! notes (apply merge (map #(hash-map (keyword (str %2)) %1) (str/split (slurp file) #"\s") (range 7)))))
 ;;"./src/touch_piano/notes.settings1"
 
 (defn change-settings []
@@ -74,13 +74,28 @@
 ;8 load profile
 ;9 reset profile
 
+(defn change-note 
+  ([button levels]
+   (swap! notes assoc (keyword (str button)) (number->note (+ (note->number (@notes (keyword (str button)))) levels)))))
 
-(defn lower-note [button & rest]
-  (swap! notes assoc (keyword button) (if rest
-                                        (notes button))))
+(defn lower-note
+  [button]
+  (change-note button -1))
+
+(defn raise-note
+  [button]
+  (change-note button 1))
+
+(defn lower-note-level
+  [button level]
+  (change-note button (- level)))
+
+(defn raise-note-level
+  [button level]
+  (change-note button level))
+
 ;;FIXA OVAN, Ändra från sparade A4 osv till nummer! Låt olika noter vara representerade av nummer.
-(defn raise-note [button & rest]
-  2)
+
 (defn play-note [button]
   3)
 (defn save-note [button]
@@ -101,8 +116,8 @@
     (let [button choice]
       (cond (= 1 input) (lower-note button)
             (= 2 input) (raise-note button)
-            (= 3 input) (lower-note button 8)
-            (= 4 input) (raise-note button 8)
+            (= 3 input) (lower-note-level button 8)
+            (= 4 input) (raise-note-level button 8)
             (= 5 input) (play-note button)
             (>= 6 input) (save-note button)))))
 
