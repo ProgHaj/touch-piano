@@ -95,11 +95,12 @@
   (change-note button level))
 
 ;;FIXA OVAN, Ändra från sparade A4 osv till nummer! Låt olika noter vara representerade av nummer.
-
+;;^done
+;;vFår fixa i framtiden, skitsamma nu. Spela noten kan vara bra dock heh.. men behöver tillgång till pianot då. Ska nog lägga in pianot i egen fil, sen usea den här bla
 (defn play-note [button]
   3)
 (defn save-note [button]
-  4)
+  (change-settings))
 
 
 ;;1
@@ -111,15 +112,16 @@
 (defn third-menu-1
   "Modify button"
   [input choice]
-  (do
+  (if (= input 0)
     (change-settings)
     (let [button choice]
       (cond (= 1 input) (lower-note button)
             (= 2 input) (raise-note button)
             (= 3 input) (lower-note-level button 8)
             (= 4 input) (raise-note-level button 8)
-            (= 5 input) (play-note button)
-            (>= 6 input) (save-note button)))))
+            ;(= 5 input) (play-note button)
+            (>= 6 input) (save-note button)
+            ))))
 
 
 
@@ -150,7 +152,7 @@
 ;;7
 ;1-9 save to save-file-N
 ;Saves all settings to Nth file.
-(defn settings-load []
+(defn settings-save []
   (spit (str "./settings-" (last (:decisions settings)))))
 
 ;;8
@@ -166,6 +168,9 @@
 
 ;Load from file settings?
 (defn decide [input]
-  (cond (= 0 (count decisions)) (first-menu input)
-        (= 1 (count decisions)) (second-menu input)
-        (= 2 (count decisions)) ((symbol (str "third-menu-"(@decisions 0))) input (@decisions 1))))
+  (if (= input 0)
+    (change-settings)
+    (cond (= 0 (count @decisions)) (first-menu input)
+          (= 1 (count @decisions)) (second-menu input)
+          (= 2 (count @decisions)) ((symbol (str "third-menu-"(@decisions 0))) input (@decisions 1)))))
+;fix bug, function not working (third one)
